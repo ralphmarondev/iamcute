@@ -1,0 +1,65 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  padding: 15px;
+  display: inline-block;
+  border: 1px solid purple;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.text-field {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  height: fit-content;
+}
+
+.label {
+  font-size: 14px;
+  color: orangered;
+}
+
+.input {
+  font-size: 18px;
+  padding: 5px 15px;
+  color: purple;
+  font-weight: 500;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: greenyellow;
+  font-size: 18px;
+  color: purple;
+  font-weight: 600;
+}
+
+button:hover {
+  background: rgb(140, 209, 36);
+}
+
+#notice {
+  width: 350px;
+  padding: 15px;
+  text-align: justify;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
