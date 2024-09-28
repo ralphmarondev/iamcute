@@ -1,0 +1,40 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  color: purple;
+}
+
+.container {
+  height: 60vh;
+  width: 80wh;
+  margin: 0 6% 0;
+  display: flex;
+  align-items: center;
+  border: 3px solid purple;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+img {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.controls {
+  margin: 16px 6% 0;
+  border-radius: 8px;
+  display: inline-flex;
+  padding: 16px;
+  border: 1px solid orangered;
+}
+
+.controls button {
+  padding: 8px 16px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}

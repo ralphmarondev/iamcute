@@ -17,6 +17,10 @@ Here, web spells are cast with the power of HTML, CSS, JS, PHP, and XAMPP—spar
 
 Because coding is way more fun when there's a unicorn involved! 🦄 Whether you're crafting digital rainbows or building castles in code, **xamppicorn** is here to make the journey a little more magical.
 
+## What's New?
+
+This is my assignment on September 28, 2024 for online technology subject.
+
 ---
 
 Happy coding,  
