@@ -1,73 +1,111 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>CUTE</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Am Cute</title>
     <link rel="stylesheet" href="css/index.css" />
-    <link
-      rel="shortcut icon"
-      href="img/logo_in_svg_format.svg"
-      type="image/x-icon"
-    />
-    <!-- jquery -->
-    <script src="js/lib/cute.js"></script>
+    <link rel="shortcut icon" href="img/logo-1.jpg" type="image/x-icon" />
   </head>
   <body>
-    <div class="nav">
-      <h1>CUTE</h1>
-    </div>
-    <div class="logo-container">
-      <img src="img/logo_in_svg_format.svg" alt="logo" class="logo" />
-      <p class="greetings">Hello there, CUTE Group is here!</p>
-    </div>
+    <header>
+      <div class="logo">I Am Cute</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#members">Members</a>
+        <a href="#services">Services</a>
+      </nav>
+      <div class="action">Login</div>
+    </header>
+    <main>
+      <section class="home" id="home">
+        <div class="text">
+          <h1 class="text-title">I Am Cute</h1>
+          <h3 class="text-description">
+            I Am Cute is a collaborative website created during our fourth [4th]
+            year as a Computer Engineering student at Cagayan States University.
+          </h3>
+        </div>
+        <div class="image">
+          <img src="img/logo-1.jpg" alt="I Am Cute logo" />
+        </div>
+      </section>
 
-    <div class="body-container">
-      <h2>Members</h2>
-      <hr />
-      <ul>
-        <li id="ralphmaron" class="ralphmaron">Ralph Maron Eda</li>
-        <li id="jack" class="jack">Jack Cabiggayan</li>
-        <li id="triesha" class="triesha">Triesha Olunan</li>
-        <li id="jezlyn" class="jezlyn">Jezlyn Cabbab</li>
-      </ul>
+      <section class="members" id="members">
+        <h2>Cute Members</h2>
+        <div class="member-list">
+          <div class="member-container">
+            <img src="img/ralphmaron.jpg" alt="My Image" class="image" />
+            <p class="name">Ralph Maron Eda</p>
+            <p class="description">Computer Engineer</p>
+          </div>
+          <div class="member-container">
+            <img src="img/jack.jpg" alt="My Image" class="image" />
+            <p class="name">Jack Cabiggayan</p>
+            <p class="description">Computer Engineer</p>
+          </div>
+          <div class="member-container">
+            <img src="img/triesha.jpg" alt="My Image" class="image" />
+            <p class="name">Triesha Mae Olunan</p>
+            <p class="description">Computer Engineer</p>
+          </div>
+          <div class="member-container">
+            <img src="img/jezlyn.jpg" alt="My Image" class="image" />
+            <p class="name">Jezlyn Cabbab</p>
+            <p class="description">Computer Engineer</p>
+          </div>
+        </div>
+      </section>
 
-      <h2>Services</h2>
-      <hr />
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Web Developer</td>
-            <td>120PHP</td>
-          </tr>
-          <tr>
-            <td>Web Designer</td>
-            <td>100PHP</td>
-          </tr>
-          <tr>
-            <td>Web Architecture</td>
-            <td>110PHP</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+          <div class="service-container">
+            <img src="img/webdev.png" alt="My Image" class="image" />
+            <p class="name">Web Developer</p>
+            <p class="description">
+              Builds functional, responsive website tailored to your business
+              needs.
+            </p>
+            <p class="price">$400</p>
+          </div>
+          <div class="service-container">
+            <img src="img/webdesign.png" alt="My Image" class="image" />
+            <p class="name">Web Designer</p>
+            <p class="description">
+              Crafts visually appealing and user-friendly website designs.
+            </p>
+            <p class="price">$350</p>
+          </div>
+          <div class="service-container">
+            <img src="img/webarch.png" alt="My Image" class="image" />
+            <p class="name">Web Architecture</p>
+            <p class="description">
+              Designs scalable, secure, and efficient web structures for optimal
+              performance.
+            </p>
+            <p class="price">$300</p>
+          </div>
+          <div class="service-container">
+            <img src="img/mobiledev.png" alt="My Image" class="image" />
+            <p class="name">Mobile Developer</p>
+            <p class="description">
+              Creates mobile apps for seamless experiences on iOS and Android
+              platforms.
+            </p>
+            <p class="price">$500</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-    <div class="contact-container">
-      <a href="contact.html" class="contact">Contact</a>
+    <div class="floating-button">
+      <a href="contact.html" class="contact-btn">Contact</a>
     </div>
-
-    <!-- dialog -->
-    <div id="dialog" class="dialog">
-      <div class="dialog-content">
-        <span id="close-dialog-btn" class="close-btn">&times;</span>
-        <img id="dialog-image" src="" alt="Person Image" />
-        <h2 id="dialog-name">Hello World! Ralph Maron Eda is here!</h2>
-        <p id="dialog-description">I am cute! lolzzz.</p>
-      </div>
-    </div>
+    <footer>
+      <p>© Copyright 2024</p>
+      <p>Built with ♡ by Cuties!😁</p>
+    </footer>
 
     <script src="js/index.js"></script>
   </body>

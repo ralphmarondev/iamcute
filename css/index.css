@@ -3,110 +3,75 @@
 }
 
 body {
-  height: 200vh;
+  background: azure;
 }
-
-h2 {
-  color: purple;
-}
-
-hr {
-  width: 100%;
-  background: purple;
-  box-shadow: inset;
-  padding: 0.4px;
-}
-
-/* navigation  */
-.nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: purple;
-  color: white;
-  height: 80px;
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 64px;
+  background: purple;
+  color: white;
+  position: sticky;
+  top: 1px;
 }
 
-.nav h1 {
-  padding: 0 50px;
-}
-
-/* logo and greeting  */
 .logo {
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-  border: 1px solid purple;
+  font-weight: 500;
+  font-size: 18px;
 }
 
-.logo-container {
-  width: 100%;
+.action {
+  padding: 8px 16px;
+  background: orangered;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* home */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 85vh;
+  margin-top: 16px;
+  background: azure;
+}
+
+.text {
+  width: 40vw;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
-}
-
-.logo-container .greetings {
-  font-weight: 600;
-  font-size: 18px;
   color: purple;
-  padding-top: 10px;
 }
 
-.body-container {
-  width: 100%;
+.image {
+  width: 40vw;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* members  */
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
 }
 
-ul li {
-  list-style: none;
-  padding: 10px 15px;
-  background: purple;
-  color: white;
-  margin: 10px;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-ul li:hover {
-  background: rgb(79, 12, 79);
-}
-
-/* services  */
-table {
-  width: 60%;
-}
-
-table th {
-  text-align: center;
-  border: 1px solid purple;
-  padding: 10px;
-}
-
-table td {
-  text-align: center;
-  border: 1px solid purple;
-  padding: 10px;
-}
-
-/* contact button  */
-.contact-container {
+/* contact button */
+.floating-button {
   position: sticky;
   bottom: 0;
   width: 100%;
@@ -115,11 +80,11 @@ table td {
   justify-content: end;
 }
 
-.contact-container .contact {
-  margin: 50px;
+.floating-button .contact-btn {
+  margin: 50px 50px 10px 0;
   background: purple;
   color: white;
-  padding: 10px 15px;
+  padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
@@ -127,45 +92,102 @@ table td {
   font-weight: 500;
 }
 
-.contact-container .contact:hover {
-  background: rgb(79, 12, 79);
-}
-
-/* dialogs  */
-.dialog {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
+/* members */
+.members {
+  background: floralwhite;
+  padding: 32px;
+  display: flex;
   align-items: center;
+  flex-direction: column;
+}
+.member-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.dialog-content {
-  max-width: 600px;
+.member-container {
   background: white;
-  padding: 20px;
+  border: 1px solid orange;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+  margin: 8px;
   border-radius: 8px;
-  text-align: center;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 10px orange;
 }
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  color: purple;
-  cursor: pointer;
-}
-
-.dialog-content img {
-  width: 200px;
-  height: 200px;
+.member-container img {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
+}
+
+.member-container .name {
+  font-weight: 600;
+  font-size: 20px;
+  color: orange;
+}
+
+.member-container .description {
+  text-align: center;
+}
+
+/* services */
+.services {
+  background: rgb(237, 195, 229);
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.service-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.service-container {
+  background: white;
+  border: 1px solid rgb(208, 94, 187);
+  width: 240px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+  margin: 8px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(208, 94, 187);
+}
+
+.service-container img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.service-container .name {
+  font-weight: 600;
+  font-size: 20px;
+  color: purple;
+}
+
+.service-container .description {
+  text-align: center;
+}
+
+.service-container .price {
+  font-size: 24px;
+  color: purple;
+  font-weight: 600;
+}
+
+/* footer */
+footer {
+  margin-top: 16px;
+  padding: 32px;
 }

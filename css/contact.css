@@ -2,64 +2,97 @@
   font-family: "Courier New", Courier, monospace;
 }
 
-body {
+header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  padding: 16px 64px;
+  background: purple;
+  color: white;
+  position: sticky;
+  top: 1px;
 }
 
-form {
-  padding: 15px;
-  display: inline-block;
-  border: 1px solid purple;
-  border-radius: 8px;
-  width: 300px;
-}
-
-.text-field {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  height: fit-content;
-}
-
-.label {
-  font-size: 14px;
-  color: orangered;
-}
-
-.input {
-  font-size: 18px;
-  padding: 5px 15px;
-  color: purple;
+.logo {
   font-weight: 500;
+  font-size: 18px;
+}
+
+.action {
+  padding: 8px 16px;
+  background: orangered;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.action a {
+  color: white;
+  text-decoration: none;
+}
+
+/* main content */
+main {
+  margin-top: 16px;
+}
+
+.contact {
+  margin-top: 16px;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px purple;
+}
+
+.contact-form-container label {
+  line-height: 32px;
+  font-weight: 600;
+  color: purple;
+}
+
+.contact-form-container textarea {
+  min-height: 64px;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.contact-form-container .input-field {
+  width: 95%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset purple;
+  font-size: 18px;
   outline: none;
 }
 
-button {
-  padding: 10px 20px;
-  margin: 10px 5px;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  background: greenyellow;
-  font-size: 18px;
+.input-field::placeholder {
+  padding: 8px;
   color: purple;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border: 2px solid purple;
+  border-radius: 5px;
+  font-size: 18px;
   font-weight: 600;
+  transition: 3s;
 }
 
-button:hover {
-  background: rgb(140, 209, 36);
-}
-
-#notice {
-  width: 350px;
-  padding: 15px;
-  text-align: justify;
-}
-
-textarea {
-  resize: none;
-  overflow: hidden;
-  box-sizing: border-box;
+.submit-btn:hover {
+  background-color: purple;
+  border: 2px solid purple;
+  cursor: pointer;
 }

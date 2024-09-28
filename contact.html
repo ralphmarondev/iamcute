@@ -1,63 +1,64 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>CONTACT</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
     <link rel="stylesheet" href="css/contact.css" />
-    <link
-      rel="shortcut icon"
-      href="img/logo_in_svg_format.svg"
-      type="image/x-icon"
-    />
   </head>
   <body>
-    <h2>Contact Us</h2>
-    <a href="index.html" id="home">Home</a>
-    <br /><br />
-
-    <form onsubmit="onSubmit(event)">
-      <div class="text-field">
-        <label class="label">Name:</label>
-        <input
-          type="text"
-          name="name"
-          class="input"
-          id="name"
-          placeholder="Ralph Maron Eda"
-          required
-        />
+    <header>
+      <div class="logo">I Am Cute</div>
+      <span>Get In Touch With Us</span>
+      <div class="action"><a href="index.html">Back to Home</a></div>
+    </header>
+    <main>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <form>
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="sender-name"
+                placeholder="Enter Your Name"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="sender-email"
+                placeholder="Enter Your Email"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                cols="60"
+                rows="10"
+                placeholder="Enter Your Message"
+                name="message"
+                class="input-field"
+                required
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              id="submit-btn"
+              class="submit-btn"
+            />
+          </form>
+        </div>
       </div>
-
-      <div class="text-field">
-        <label class="label">Email:</label>
-        <input
-          type="email"
-          name="email"
-          class="input"
-          id="email"
-          placeholder="edaralphmaron@gmail.com"
-          required
-        />
-      </div>
-
-      <div class="text-field">
-        <label class="label">Message:</label>
-        <textarea
-          rows="2"
-          name="message"
-          class="input"
-          id="message"
-          placeholder="iscute"
-          required
-        ></textarea>
-      </div>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <p id="notice">
-      We'd love to hear from you! Drop us a message and we'll get back to you as
-      soon as we can.
-    </p>
-
-    <script src="js/contact.js"></script>
+    </main>
   </body>
 </html>
