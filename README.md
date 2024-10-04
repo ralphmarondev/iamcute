@@ -1,9 +1,13 @@
-# 🦄 xamppicorn 🦄
+# 🦄 iamcute 🦄
 
-**Welcome to the magical land of xamppicorn!**  
+**Welcome to the magical land of iamcute!**  
 Crafted with care by the one and only **Ralph Maron Eda** ✨
 
 Here, web spells are cast with the power of HTML, CSS, JS, PHP, and XAMPP—sparkling with creativity and fun!
+
+## What's this repository all about?
+
+This repository was formerly known as **xamppicorn**, but we changed it to **iamcute** to align with our group name. I created this repository to store my codes from my online technology class, where I can showcase my learning journey!
 
 ## What’s inside the magic forest?
 
@@ -13,9 +17,9 @@ Here, web spells are cast with the power of HTML, CSS, JS, PHP, and XAMPP—spar
 - 🧩 **PHP Mysteries** – solving puzzles, one server-side spell at a time.
 - 🏰 **XAMPP Castle** – the magical fortress where all the adventures live!
 
-## Why xamppicorn?
+## Why iamcute?
 
-Because coding is way more fun when there's a unicorn involved! 🦄 Whether you're crafting digital rainbows or building castles in code, **xamppicorn** is here to make the journey a little more magical.
+Because coding is way more fun when there's a cute twist involved! 🦄 Whether you're crafting digital rainbows or building castles in code, **iamcute** is here to make the journey a little more magical.
 
 ---
 
