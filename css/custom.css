@@ -1,0 +1,45 @@
+/* Override Bootstrap's primary color */
+:root {
+  --bs-primary: #6f42c1; /* Purple color */
+}
+
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.vh-80 {
+  height: 80vh;
+}
+
+.vh-90 {
+  height: 90vh;
+}
+
+.bg-orange {
+  background: orange;
+}
+
+.color-white {
+  color: white;
+}
+
+.sticky-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-family: "Courier New", Courier, monospace;
+}
