@@ -10,7 +10,7 @@ loginBtn.addEventListener('click', function () {
     (username === 'root' && passwd === 'toor') ||
     (username === 'ralphmaron' && passwd === 'iscute')
   ) {
-    window.location.href = 'dashboard.html';
+    window.location.href = 'dashboard.php';
   } else {
     alert('Incorrect password.');
   }
