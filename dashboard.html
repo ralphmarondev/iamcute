@@ -76,7 +76,9 @@
                 <hr class="dropdown-divider" />
               </li>
               <li>
-                <a href="#" class="dropdown-item text-primary">Profile</a>
+                <a href="#" class="dropdown-item text-primary"
+                  >Administrators</a
+                >
               </li>
             </ul>
           </div>
@@ -180,14 +182,41 @@
             <td>Very cutesy, Very Demure!</td>
             <td class="text-center">SUPERUSER</td>
             <td class="text-center">
-              <button class="btn btn-success btn-sm m-1" title="View">
-                <i class="fas fa-eye"></i>
+              <button
+                class="btn btn-success btn-sm m-1"
+                title="View"
+                data-bs-target="#view-modal"
+                data-bs-toggle="modal"
+              >
+                <i
+                  class="fas fa-eye"
+                  data-bs-target="#view-modal"
+                  data-bs-toggle="modal"
+                ></i>
               </button>
-              <button class="btn btn-warning btn-sm m-1" title="Update">
-                <i class="fas fa-pencil-alt"></i>
+              <button
+                class="btn btn-warning btn-sm m-1"
+                title="Update"
+                data-bs-target="#update-modal"
+                data-bs-toggle="modal"
+              >
+                <i
+                  class="fas fa-pencil-alt"
+                  data-bs-target="#update-modal"
+                  data-bs-toggle="modal"
+                ></i>
               </button>
-              <button class="btn btn-danger btn-sm m-1" title="Delete">
-                <i class="fas fa-trash"></i>
+              <button
+                class="btn btn-danger btn-sm m-1"
+                title="Delete"
+                data-bs-target="#delete-modal"
+                data-bs-toggle="modal"
+              >
+                <i
+                  class="fas fa-trash"
+                  data-bs-target="#delete-modal"
+                  data-bs-toggle="modal"
+                ></i>
               </button>
             </td>
           </tr>
@@ -195,56 +224,294 @@
       </table>
     </div>
 
-    <div class="container m-3">
-      <form id="register-form">
-        <div class="modal-body">
-          <div class="row">
-            <div class="col mb-3">
-              <label for="fullname-input" class="form-label">Full Name</label>
-              <input
-                type="text"
-                name="fullname-input"
-                id="fullname-input"
-                class="form-control"
-                placeholder="Enter your fullname"
-                required
-              />
-            </div>
-          </div>
+    <!-- start modals -->
 
-          <div class="row">
-            <div class="col mb-3">
-              <label for="username-input" class="form-label">Username</label>
-              <input
-                type="text"
-                name="username-input"
-                id="username-input"
-                class="form-control"
-                placeholder="Enter your username"
-                required
-              />
-            </div>
+    <!-- view modal -->
+    <div
+      class="modal fade"
+      id="view-modal"
+      tabindex="-2"
+      aria-labelledby="view-modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary fw-bold fs-4" id="view-modal">
+              View
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
+          <form id="login-form">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="username-input" class="form-label"
+                    >Username</label
+                  >
+                  <input
+                    type="text"
+                    name="username-input"
+                    id="username-input"
+                    class="form-control"
+                    placeholder="Enter your username"
+                    readonly
+                  />
+                </div>
+              </div>
 
-          <div class="row">
-            <div class="col mb-3">
-              <label for="password-input" class="form-label">Password</label>
-              <input
-                type="password"
-                name="password-input"
-                id="password-input"
-                class="form-control"
-                placeholder="Enter your password"
-                required
-              />
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="password-input" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    name="password-input"
+                    id="password-input"
+                    class="form-control"
+                    placeholder="Enter your password"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="career-input" class="form-label">Career</label>
+                  <input
+                    type="text"
+                    name="career-input"
+                    id="career-input"
+                    class="form-control"
+                    placeholder="Enter your career"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="description-input" class="form-label"
+                    >Description</label
+                  >
+                  <textarea
+                    name="description-input"
+                    id="description-input"
+                    class="form-control"
+                    placeholder="Enter about you"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
             </div>
-          </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-primary"
+                data-bs-target="#view-modal"
+                data-bs-toggle="modal"
+              >
+                CLOSE
+              </button>
+            </div>
+          </form>
         </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" id="register-btn">LOGIN</button>
-        </div>
-      </form>
+      </div>
     </div>
+
+    <!-- update modal -->
+    <div
+      class="modal fade"
+      id="update-modal"
+      tabindex="-2"
+      aria-labelledby="update-modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary fw-bold fs-4">Update</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="login-form">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="username-input" class="form-label"
+                    >Username</label
+                  >
+                  <input
+                    type="text"
+                    name="username-input"
+                    id="username-input"
+                    class="form-control"
+                    placeholder="Enter your username"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="password-input" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    name="password-input"
+                    id="password-input"
+                    class="form-control"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="career-input" class="form-label">Career</label>
+                  <input
+                    type="text"
+                    name="career-input"
+                    id="career-input"
+                    class="form-control"
+                    placeholder="Enter your career"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="description-input" class="form-label"
+                    >Description</label
+                  >
+                  <textarea
+                    name="description-input"
+                    id="description-input"
+                    class="form-control"
+                    placeholder="Enter about you"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-warning"
+                data-bs-target="#update-modal"
+                data-bs-toggle="modal"
+              >
+                UPDATE
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- delete modal -->
+    <div
+      class="modal fade"
+      id="delete-modal"
+      tabindex="-2"
+      aria-labelledby="delete-modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary fw-bold fs-4" id="delete-modal">
+              Delete
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="login-form">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="username-input" class="form-label"
+                    >Username</label
+                  >
+                  <input
+                    type="text"
+                    name="username-input"
+                    id="username-input"
+                    class="form-control"
+                    placeholder="Enter your username"
+                    readonly
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="password-input" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    name="password-input"
+                    id="password-input"
+                    class="form-control"
+                    placeholder="Enter your password"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="career-input" class="form-label">Career</label>
+                  <input
+                    type="text"
+                    name="career-input"
+                    id="career-input"
+                    class="form-control"
+                    placeholder="Enter your career"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="description-input" class="form-label"
+                    >Description</label
+                  >
+                  <textarea
+                    name="description-input"
+                    id="description-input"
+                    class="form-control"
+                    placeholder="Enter about you"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-danger"
+                data-bs-target="#delete-modal"
+                data-bs-toggle="modal"
+              >
+                DELETE
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- end modals -->
 
     <!-- scripts -->
     <script src="vendors/bootstrap/js/bootstrap.bundle.js"></script>

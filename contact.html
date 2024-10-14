@@ -59,7 +59,14 @@
             <a href="index.html" class="nav-link text-primary">Go Home</a>
           </div>
 
-          <button class="btn btn-primary" type="button">LOGIN</button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#login-modal"
+          >
+            LOGIN
+          </button>
         </div>
       </div>
     </header>
@@ -112,6 +119,69 @@
               <button class="btn btn-primary mt-3">SUBMIT</button>
             </form>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modals -->
+    <div
+      class="modal fade"
+      id="login-modal"
+      tabindex="-1"
+      aria-labelledby="login-modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary fw-bold fs-4" id="login-modal">
+              LOGIN
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="login-form">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="username-input" class="form-label"
+                    >Username</label
+                  >
+                  <input
+                    type="text"
+                    name="username-input"
+                    id="username-input"
+                    class="form-control"
+                    placeholder="Enter your username"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mb-3">
+                  <label for="password-input" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    name="password-input"
+                    id="password-input"
+                    class="form-control"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" id="login-btn">LOGIN</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
