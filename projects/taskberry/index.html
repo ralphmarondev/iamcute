@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskberry</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="vendors/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-4 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="Logo" width="30" height="24" />
+          Taskberry
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-supported-content"
+          aria-controls="navbar-supported-content"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-supported-content">
+          <div class="d-flex ms-auto">
+            <button
+              class="btn btn-outline-primary px-4"
+              data-bs-toggle="modal"
+              data-bs-target="#about-modal"
+            >
+              ABOUT
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col align-items-center justify-content-center mb-3">
+          <div class="container" style="max-width: 500px">
+            <div class="card shadow">
+              <div class="card-content">
+                <form class="p-5">
+                  <h3 class="text-primary fw-bold">Welcome Back!</h3>
+                  <p class="mb-3 text-secondary">
+                    Please enter your credentials.
+                  </p>
+                  <div class="col mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input
+                      type="text"
+                      name="username"
+                      id="username"
+                      v-model="username"
+                      class="form-control"
+                      placeholder="Enter Username"
+                    />
+                  </div>
+                  <div class="col mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      v-model="password"
+                      class="form-control"
+                      placeholder="Enter Password"
+                    />
+                  </div>
+
+                  <p class="text-danger" v-if="showResponse">{{ response }}</p>
+
+                  <a
+                    href="home.html"
+                    type="button"
+                    class="btn btn-primary w-100 mt-3"
+                  >
+                    LOGIN
+                  </a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex align-items-center justify-content-center mb-3">
+          <div class="card shadow" style="min-width: 480px">
+            <img src="img/logo.png" alt="" height="450" width="450" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="vendors/bootstrap/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
