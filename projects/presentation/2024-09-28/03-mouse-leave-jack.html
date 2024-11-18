@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>HTML DOM Events</h1>
+    <h2>The onmouseleave Event</h2>
+
+    <img
+      onmouseenter="bigImg(this)"
+      onmouseleave="normalImg(this)"
+      border="0"
+      src="smiley.gif"
+      alt="Smiley"
+      width="132"
+      height="132"
+    />
+
+    <p>
+      The function bigImg() is triggered when the user moves the mouse pointer
+      onto the image.
+    </p>
+    <p>
+      The function normalImg() is triggered when the mouse pointer is moved out
+      of the image.
+    </p>
+
+    <script>
+      function bigImg(x) {
+        x.style.height = '164px';
+        x.style.width = '164px';
+      }
+
+      function normalImg(x) {
+        x.style.height = '132px';
+        x.style.width = '132px';
+        // alert('This is normal image');
+      }
+    </script>
+  </body>
+</html>

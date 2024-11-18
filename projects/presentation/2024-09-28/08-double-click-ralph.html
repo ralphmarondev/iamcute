@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>HTML DOM Events</h1>
+    <h2>The ondblclick Event</h2>
+
+    <p ondblclick="myFunction()">
+      Double-click this paragraph to trigger a function.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        document.getElementById('demo').innerHTML += 'Hello World ';
+      }
+    </script>
+  </body>
+</html>

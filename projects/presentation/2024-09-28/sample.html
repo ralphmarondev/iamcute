@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <title>Some title</title>
+    <style>
+      * {
+        font-family: 'Courier New', Courier, monospace;
+        color: purple;
+      }
+
+      button {
+        border: none;
+        color: white;
+        background: orangered;
+        padding: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: rgb(213, 59, 3);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>01-On Mouse Down</h2>
+    <p>
+      Occured when a button is pressed down. Triggered before the button is
+      release
+    </p>
+    <button onmousedown="onYourMouseDown()">Click Me Cutie Pie!</button>
+    <br />
+    <br />
+    <hr />
+
+    <h2>02-On Mouse Up</h2>
+    <p>Triggered when the mouse button is released over an element.</p>
+    <button onmouseup="onYourMouseUp()">Click Me Cutie Pie!</button>
+    <br />
+    <br />
+    <hr />
+
+    <h2>03-On Mouse Enter</h2>
+    <p>
+      Triggered when the mouse pointer enters the boundary of an element. It
+      does not trigger if the pointer moves over child elements.
+    </p>
+    <button onmouseenter="onYourMouseEnter()">Click Me Cutie Pie!</button>
+    <br />
+    <br />
+    <hr />
+
+    <h2>04-On Mouse Leave</h2>
+    <p>
+      Triggered when the mouse pointer leaves the boundary of an element. It
+      does not trigger if the pointer moves out of child elements
+    </p>
+    <button onmouseleave="onYourMouseLeave()">Click Me Cutie Pie!</button>
+    <br />
+    <br />
+    <hr />
+
+    <h2>05-On Mouse Move</h2>
+    <p>
+      Triggered whenever the mouse pointer moves over an element, continuously
+      as the mouse moves.
+    </p>
+    <button onmousemove="onYourMouseMove()">Click Me Cutie Pie!</button>
+    <br />
+    <br />
+    <hr />
+
+    <h2>06-On Mouse Out</h2>
+    <p>
+      Triggered when the mouse pointer leaves the boundary of an element or its
+      child elements.
+    </p>
+    <button onmouseout="onYourMouseOut()">Click Me Cutie Pie!</button>
+    <br />
+    <br />
+    <hr />
+
+    <h2>07-On Mouse Over</h2>
+    <p>
+      Triggered when the mouse pointer enters the boundary of an element or its
+      child elements.
+    </p>
+    <button onmouseover="onYourMouseOver()">Click Me Cutie Pie!</button>
+    <br />
+    <br />
+    <hr />
+
+    <h2>08-On Double Click</h2>
+    <p>
+      Fires when a user double-clicks on an element. A double-click is typically
+      perceived as two rapid clicks, so the event fires once per double-click
+    </p>
+    <button ondblclick="onYourMouseDoubleClick()">Click Me Cutie Pie!</button>
+    <br />
+    <br />
+    <hr />
+
+    <br /><br />
+    <h2>
+      Assignment: Instead of defining directly the event listeners on the
+      elements, do it using javascript! 😊
+    </h2>
+
+    <script>
+      function onYourMouseDown() {
+        console.log('I am triggered! [onmousedown]');
+      }
+
+      function onYourMouseUp() {
+        console.log('I am triggered! [onmouseup]');
+      }
+
+      function onYourMouseEnter() {
+        console.log('I am triggered! [onmouseenter]');
+      }
+
+      function onYourMouseLeave() {
+        console.log('I am triggered! [onmouseleave]');
+      }
+
+      function onYourMouseMove() {
+        console.log('I am triggered! [onmousemove]');
+      }
+
+      function onYourMouseOut() {
+        console.log('I am triggered! [onmouseout]');
+      }
+
+      function onYourMouseOver() {
+        console.log('I am triggered! [onmouseover]');
+      }
+
+      function onYourMouseDoubleClick() {
+        console.log('I am triggered! [ondoubleclick]');
+      }
+    </script>
+  </body>
+</html>

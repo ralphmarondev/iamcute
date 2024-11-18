@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2024-09-21</title>
+    <!-- todo: put this inside a .css file -->
+    <style>
+      * {
+        font-family: 'Courier New', Courier, monospace;
+      }
+      .container {
+        width: 100wh;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .box {
+        background: purple;
+        color: white;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: animate 1.5s ease infinite alternate;
+        transition: 1s ease; /*for transition */
+        /* border: 10px dotted pink;
+        /* border-bottom: rgb(238, 130, 238);
+        border-bottom-color: rgb(255, 0, 255);
+         */
+      }
+
+      .box:hover {
+        rotate: 30deg; /*for transition */
+      }
+
+      @keyframes animate {
+        0% {
+          /* scale: 1; */
+          border: 10px solid red;
+        }
+        25% {
+          border: 10px solid peru;
+        }
+        50% {
+          /* scale: 1.5; */
+          border: 10px solid green;
+        }
+        75% {
+          border: 10px solid orangered;
+        }
+        100% {
+          /* scale: 2; */
+          border: 10px solid blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        Cutie Pie!
+        <span>hello</span>
+        <p>Inside paragraph</p>
+      </div>
+    </div>
+
+    <!-- todo: put this in .js file -->
+    <script>
+      // DOM => Document Object Model
+      function sayHi() {
+        var name = 'Ralph Maron Eda';
+        alert(`${name} cutie`);
+      }
+
+      var myBox = document.querySelector('.box');
+
+      // print the whole content
+      // console.log(myBox);
+      // print the text content
+      // console.log(`Content: ${myBox.textContent}`);
+      // change the content of the element
+      // myBox.textContent = 'Hello world';
+      // getting the html element
+      // console.log(myBox.innerHTML);
+
+      // change the content of the element, can be another element
+      myBox.innerHTML =
+        '<input type="color" id="myColor" onmouseup="hello()"/>';
+
+      var newColor = document.querySelector('#myColor');
+      function hello() {
+        console.log(newColor.value);
+      }
+
+      myBox.setAttribute('color', newColor.value);
+      // todo do, myBox.childAttrib(whatever);
+    </script>
+  </body>
+</html>
+<!-- 
+### displaying output using javascript
+window.alert('message');
+console.log ('message');
+document.write('message'); 
+
+###
+html
+head
+title
+link
+script
+a => used in linking css
+p => paragraph
+b => bold
+i => italic
+strong 
+article
+footer
+header
+span
+h1
+h2
+h3
+h4
+h5
+h6
+li => list
+ul => unordered list
+ol => ordered list
+th => table head
+td => table data
+tr => table row
+table
+style
+-->
