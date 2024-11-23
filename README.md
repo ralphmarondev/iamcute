@@ -21,6 +21,10 @@ This repository was formerly known as **xamppicorn**, but we changed it to **iam
 
 Because coding is way more fun when there's a cute twist involved! 🦄 Whether you're crafting digital rainbows or building castles in code, **iamcute** is here to make the journey a little more magical.
 
+## File Structure
+- Projects
+  - Contains all of the activities, presentations, assignments, mini projects, and final project throughout the semester. 
+
 ---
 
 Happy coding,  
