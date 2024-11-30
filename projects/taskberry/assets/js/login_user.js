@@ -17,6 +17,8 @@ $(document).ready(function () {
 
         if (res.success == '1') {
           alert('Login successful')
+          $('#username').val('')
+          $('#password').val('')
           window.location.href = 'home.php'
         } else {
           alert('Login failed: ' + res.error)

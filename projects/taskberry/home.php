@@ -73,7 +73,7 @@
                   type="button"
                   class="bg-gradient btn btn-success btn-sm btn-label waves-effect waves-light"
                   data-bs-toggle="modal"
-                  data-bs-target="#addModal">
+                  data-bs-target="#newTaskModal">
                   <i class="fas fa-plus icon"></i>
                   Add New Task
                 </button>
@@ -144,6 +144,65 @@
       </div>
     </div>
   </div>
+
+  <!-- modals -->
+  <div
+    class="modal fade"
+    id="newTaskModal"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+
+    role="dialog"
+    aria-labelledby="newTaskModal"
+    aria-hidden="true">
+    <div
+      class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+      role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            New Task
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <form id="new-task-modal">
+              <div class="col">
+                <div class="row">
+                  <label for="task-name" class="form-label">Task Name</label>
+                  <input type="text" name="task-name" class="form-control" placeholder="Enter new task">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional: Place to the bottom of scripts -->
+  <script>
+    const myModal = new bootstrap.Modal(
+      document.getElementById("newTaskModal"),
+      options,
+    );
+  </script>
+
 
   <script src="assets/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>

@@ -43,7 +43,7 @@
   </nav>
 
   <!-- text and image content -->
-  <div class="d-flex align-items-center justify-content-center" style="height: 90vh">
+  <div class="d-flex align-items-center justify-content-center" style="height: 90vh;">
     <div class="container">
       <div class="row w-100">
         <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
@@ -134,7 +134,6 @@
       </div>
     </div>
   </div>
-
   <script src="assets/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="assets/js//bootstrap.bundle.min.js"></script>
