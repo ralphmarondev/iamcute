@@ -30,9 +30,9 @@
       <div class="collapse navbar-collapse" id="navbar-supported-content">
         <ul class="nav nav-pills mx-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">Tasks</a>
+            <a href="#" class="nav-link active" aria-current="page">In Progress</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">History</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Completed</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Pomodoro</a></li>
           <li class="nav-item"><a href="#" class="nav-link">About</a></li>
         </ul>
@@ -96,7 +96,7 @@
               </tr>
             </thead>
             <tbody class="list form-check-all">
-              <tr>
+              <!-- <tr>
                 <td style="text-transform: capitalize">Eat lunch</td>
                 <td class="text-center">9:21 AM Nov 5, 2024</td>
                 <td class="text-center">11:21 AM Nov 5, 2024</td>
@@ -114,7 +114,7 @@
                     <i class="fas fa-trash-alt"></i>
                   </button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
 
@@ -224,6 +224,54 @@
     </div>
   </div>
 
+  <!-- Update Task Modal -->
+  <div class="modal fade" id="updateTaskModal" tabindex="-1" aria-labelledby="updateTaskModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateTaskModalLabel">Update Task</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="update-task-form">
+            <input type="hidden" id="update-task-id">
+            <div class="mb-3">
+              <label for="update-task-name" class="form-label">Task Name</label>
+              <input type="text" class="form-control" id="update-task-name" required>
+            </div>
+            <div class="mb-3">
+              <label for="update-start-time" class="form-label">Start Time</label>
+              <input type="datetime-local" class="form-control" id="update-start-time" required>
+            </div>
+            <div class="mb-3">
+              <label for="update-end-time" class="form-label">End Time</label>
+              <input type="datetime-local" class="form-control" id="update-end-time" required>
+            </div>
+            <div class="mb-3">
+              <label for="update-priority" class="form-label">Priority</label>
+              <select class="form-control" id="update-priority" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="update-status" class="form-label">Status</label>
+              <select class="form-control" id="update-status" required>
+                <option value="pending">Pending</option>
+                <option value="ongoing">Ongoing</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="update-task-btn">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>

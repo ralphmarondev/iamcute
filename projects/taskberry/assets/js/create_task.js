@@ -46,6 +46,7 @@ $(document).ready(function () {
           $('#priority').val('')
 
           $('#newTaskModal').modal('hide')
+          location.reload()
         } else {
           alert('Saving failed: ' + res.error)
         }
