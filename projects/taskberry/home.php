@@ -28,32 +28,29 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar-supported-content">
-        <ul class="navbar-nav mx-auto">
+        <ul class="nav nav-pills mx-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">About</a>
+            <a href="#" class="nav-link active" aria-current="page">Tasks</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Settings</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="pomodoro.html">Try Pomodoro</a>
-          </li>
+          <li class="nav-item"><a href="#" class="nav-link">History</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Pomodoro</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
         </ul>
-        <div class="flex">
-          <a
-            class="btn btn-outline-primary text-uppercase"
-            type="button"
-            href="index.html">
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger dropdown-toggle text-uppercase" data-bs-toggle="dropdown" aria-expanded="false">
             Logout
-          </a>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-uppercase" href="#">Reload</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </nav>
-
   <div class="container mt-3">
     <div class="card py-3">
       <div class="container">
@@ -150,15 +147,10 @@
     class="modal fade"
     id="newTaskModal"
     tabindex="-1"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-
-    role="dialog"
     aria-labelledby="newTaskModal"
     aria-hidden="true">
     <div
-      class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
-      role="document">
+      class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">
@@ -168,15 +160,32 @@
             type="button"
             class="btn-close"
             data-bs-dismiss="modal"
-            aria-label="Close"></button>
+            aria-label="Close">
+          </button>
         </div>
         <div class="modal-body">
           <div class="container">
             <form id="new-task-modal">
-              <div class="col">
-                <div class="row">
+              <div class="row">
+                <div class="col-md-12 mb-3">
                   <label for="task-name" class="form-label">Task Name</label>
-                  <input type="text" name="task-name" class="form-control" placeholder="Enter new task">
+                  <textarea name="tast-name" id="task-name" class="form-control" placeholder="Enter new task"></textarea>
+                </div>
+                <div class="col mb-3">
+                  <label for="start-time" class="form-label">Start Time</label>
+                  <input type="datetime-local" name="start-time" id="start-time" class="form-control" placeholder="Select start time">
+                </div>
+                <div class="col mb-3">
+                  <label for="end-time" class="form-label">End Time</label>
+                  <input type="datetime-local" name="end-time" id="end-time" class="form-control" placeholder="Select end time">
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="priority" class="form-label">Priority</label>
+                  <select id="priority" name="priority" class="form-control">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                  </select>
                 </div>
               </div>
             </form>
@@ -189,24 +198,16 @@
             data-bs-dismiss="modal">
             Close
           </button>
-          <button type="button" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-primary" id="save-btn">Save</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Optional: Place to the bottom of scripts -->
-  <script>
-    const myModal = new bootstrap.Modal(
-      document.getElementById("newTaskModal"),
-      options,
-    );
-  </script>
-
-
   <script src="assets/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="assets/js//bootstrap.bundle.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/create_task.js"></script>
 </body>
 
 </html>
