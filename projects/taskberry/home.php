@@ -208,6 +208,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/create_task.js"></script>
+  <script src="assets/js/fetch_tasks.js"></script>
 </body>
 
 </html>
