@@ -68,8 +68,7 @@ $(document).ready(function () {
           if (res.success == '1') {
             alert('Task deleted successfully')
             $('#deleteConfirmationModal').modal('hide')
-            // You can refresh the tasks or remove the row from the table
-            location.reload() // Reload the page or update the table dynamically
+            location.reload()
           } else {
             alert('Error deleting task: ' + res.error)
           }
@@ -86,18 +85,10 @@ $(document).ready(function () {
     var priority = $(this).data('priority')
     var status = $(this).data('status')
 
-    console.log(
-      `Edit btn: id: ${id}, name: ${name}, start_time: ${startTime}, end_time: ${endTime}, priority: ${priority}, status: ${status}`
-    )
     const formatForDateTimeLocal = (date) => {
       const d = new Date(date)
       return d.toISOString().slice(0, 16) // Extracts "YYYY-MM-DDTHH:MM"
     }
-    console.log(
-      `start_time: ${formatForDateTimeLocal(
-        startTime
-      )}, end_time: ${formatForDateTimeLocal(endTime)}`
-    )
 
     $('#update-task-name').val(name)
     $('#update-start-time').val(formatForDateTimeLocal(startTime))
@@ -106,38 +97,39 @@ $(document).ready(function () {
     $('#update-status').val(status)
 
     $('#updateTaskModal').modal('show')
+
+    // handle update action
+    $('#update-task-btn')
+      .off('click')
+      .on('click', function () {
+        // Reassign formatted values to startTime and endTime
+        let updatedStartTime = $('#update-start-time').val()
+        let updatedEndTime = $('#update-end-time').val()
+        let updatedName = $('#update-task-name').val()
+        let updatedPriority = $('#update-priority').val()
+        let updatedStatus = $('#update-status').val()
+
+        $.post(
+          'api/update_task.php',
+          {
+            id: id,
+            name: updatedName,
+            starttime: updatedStartTime,
+            endtime: updatedEndTime,
+            priority: updatedPriority,
+            status: updatedStatus,
+          },
+          function (response) {
+            var res = JSON.parse(response)
+            if (res.success == '1') {
+              alert('Task updated successfully')
+              $('#updateTaskModal').modal('hide')
+              location.reload()
+            } else {
+              alert('Error updating task: ' + res.error)
+            }
+          }
+        )
+      })
   })
-
-  // // Handle the task update
-  // $('#update-task-btn').click(function () {
-  //   var taskId = $('#update-task-id').val()
-  //   var taskName = $('#update-task-name').val()
-  //   var startTime = $('#update-start-time').val()
-  //   var endTime = $('#update-end-time').val()
-  //   var priority = $('#update-priority').val()
-  //   var status = $('#update-status').val()
-
-  //   // Send the update request to the server
-  //   $.post(
-  //     'api/update_task.php',
-  //     {
-  //       id: taskId,
-  //       name: taskName,
-  //       starttime: startTime,
-  //       endtime: endTime,
-  //       priority: priority,
-  //       status: status,
-  //     },
-  //     function (response) {
-  //       var res = JSON.parse(response)
-  //       if (res.success == '1') {
-  //         alert('Task updated successfully')
-  //         $('#updateTaskModal').modal('hide')
-  //         location.reload() // Reload the page or dynamically update the task in the table
-  //       } else {
-  //         alert('Error updating task: ' + res.error)
-  //       }
-  //     }
-  //   )
-  // })
 })

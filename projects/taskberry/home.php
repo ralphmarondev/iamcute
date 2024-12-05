@@ -259,7 +259,7 @@
               <label for="update-status" class="form-label">Status</label>
               <select class="form-control" id="update-status" required>
                 <option value="in-progress">In Progress</option>
-                <option value="Completed">Completed</option>
+                <option value="completed">Completed</option>
               </select>
             </div>
           </form>
