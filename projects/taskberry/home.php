@@ -34,20 +34,10 @@
           </li>
           <li class="nav-item"><a href="#" class="nav-link">Completed</a></li>
           <li class="nav-item"><a href="pomodoro.php" class="nav-link">Pomodoro</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Settings</a></li>
+          <li class="nav-item"><a href="settings.php" class="nav-link">Settings</a></li>
         </ul>
-        <div class="btn-group">
-          <button type="button" class="btn btn-danger dropdown-toggle text-uppercase" data-bs-toggle="dropdown" aria-expanded="false">
-            Logout
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item text-uppercase" href="#">Reload</a></li>
-          </ul>
-        </div>
+
+        <a href="index.php" class="btn btn-danger px-3">Logout</a>
       </div>
     </div>
   </nav>
