@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbar-supported-content">
         <ul class="nav nav-pills mx-auto">
           <li class="nav-item"><a href="home.php" class="nav-link">In Progress</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Completed</a></li>
+          <li class="nav-item"><a href="completed.php" class="nav-link">Completed</a></li>
           <li class="nav-item"><a href="pomodoro.php" class="nav-link active" aria-current="page">Pomodoro</a></li>
           <li class="nav-item"><a href="settings.php" class="nav-link">Settings</a></li>
         </ul>
