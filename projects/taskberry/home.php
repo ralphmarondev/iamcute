@@ -34,7 +34,7 @@
           </li>
           <li class="nav-item"><a href="#" class="nav-link">Completed</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Pomodoro</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Settings</a></li>
         </ul>
         <div class="btn-group">
           <button type="button" class="btn btn-danger dropdown-toggle text-uppercase" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,28 +55,28 @@
     <div class="card py-3">
       <div class="container">
         <div class="b-card-body">
-          <div class="align-items-center d-flex pb-2">
-            <div class="mb-0 flex-grow-1">
-              <div class="col-3" sm="2">
-                <input
-                  class="form-control form-control-sm"
-                  placeholder="Search Task" />
-              </div>
+          <div class="row align-items-center pb-2">
+            <!-- Search Task -->
+            <div class="col-auto flex-grow-1">
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                placeholder="Search Task"
+                id="search-task" />
             </div>
-            <div class="flex-shrink-0">
-              <div
-                class="form-check form-switch form-switch-right form-switch-md">
-                <button
-                  type="button"
-                  class="bg-gradient btn btn-success btn-sm btn-label waves-effect waves-light"
-                  data-bs-toggle="modal"
-                  data-bs-target="#newTaskModal">
-                  <i class="fas fa-plus icon"></i>
-                  Add New Task
-                </button>
-              </div>
+            <!-- Add New Task Button -->
+            <div class="col-auto">
+              <button
+                type="button"
+                class="bg-gradient btn btn-success btn-sm btn-label waves-effect waves-light"
+                data-bs-toggle="modal"
+                data-bs-target="#newTaskModal">
+                <i class="fas fa-plus icon"></i>
+                Add New Task
+              </button>
             </div>
           </div>
+
           <table
             id="alternative-pagination"
             class="table nowrap dt-responsive align-middle table-hover table-bordered"
@@ -96,25 +96,7 @@
               </tr>
             </thead>
             <tbody class="list form-check-all">
-              <!-- <tr>
-                <td style="text-transform: capitalize">Eat lunch</td>
-                <td class="text-center">9:21 AM Nov 5, 2024</td>
-                <td class="text-center">11:21 AM Nov 5, 2024</td>
-                <td class="text-center">Medium</td>
-                <td class="text-center">On Going</td>
-                <td class="text-center">
-                  <button
-                    class="bg-gradient btn btn-success btn-sm btn-icon waves-effect waves-light"
-                    style="margin: 3px">
-                    <i class="fas fa-pencil-alt"></i>
-                  </button>
-                  <button
-                    class="bg-gradient btn btn-danger btn-sm btn-icon waves-effect waves-light"
-                    style="margin: 3px">
-                    <i class="fas fa-trash-alt"></i>
-                  </button>
-                </td>
-              </tr> -->
+
             </tbody>
           </table>
 
@@ -276,7 +258,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/create_task.js"></script>
-  <script src="assets/js/fetch_tasks.js"></script>
+  <script src="assets/js/fetch_inprogress_tasks.js"></script>
 </body>
 
 </html>
