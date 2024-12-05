@@ -73,8 +73,24 @@ $(document).ready(function () {
 
   // Update the timer based on user input (if needed)
   $('#set-time-btn').click(function () {
-    minutes = $('#minutes').val()
-    seconds = $('#seconds').val()
+    let newMinutes = parseInt($('#minutes').val())
+    let newSeconds = parseInt($('#seconds').val())
+
+    // Validate minutes and seconds input
+    if (isNaN(newMinutes) || isNaN(newSeconds)) {
+      alert('Please enter valid numbers for minutes and seconds.')
+      return
+    }
+
+    // Ensure seconds are between 0 and 69
+    if (newSeconds < 0 || newSeconds >= 61) {
+      alert('Seconds should be between 0 and 60.')
+      return
+    }
+
+    // Update the timer with the new values
+    minutes = newMinutes
+    seconds = newSeconds
     updateTimerDisplay()
     $('#timer-edit-form').addClass('d-none')
     $('#default-timer-display').removeClass('d-none')
