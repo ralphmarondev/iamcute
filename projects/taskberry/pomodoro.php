@@ -72,9 +72,9 @@
 
           <!-- Control Buttons -->
           <div class="d-flex justify-content-between mt-5">
-            <button id="start-15-mins" class="btn btn-primary btn-sm">15 minutes</button>
-            <button id="start-30-mins" class="btn btn-primary btn-sm">30 minutes</button>
-            <button id="start-60-mins" class="btn btn-primary btn-sm">60 minutes</button>
+            <button id="start-15-mins" class="btn btn-primary btn-sm mx-3">15 minutes</button>
+            <button id="start-30-mins" class="btn btn-primary btn-sm mx-3">30 minutes</button>
+            <button id="start-60-mins" class="btn btn-primary btn-sm mx-3">60 minutes</button>
           </div>
         </div>
       </div>
