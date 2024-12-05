@@ -237,7 +237,7 @@
             <input type="hidden" id="update-task-id">
             <div class="mb-3">
               <label for="update-task-name" class="form-label">Task Name</label>
-              <input type="text" class="form-control" id="update-task-name" required>
+              <input type="text" class="form-control" id="update-task-name" required placeholder="Task Name">
             </div>
             <div class="mb-3">
               <label for="update-start-time" class="form-label">Start Time</label>
@@ -258,9 +258,8 @@
             <div class="mb-3">
               <label for="update-status" class="form-label">Status</label>
               <select class="form-control" id="update-status" required>
-                <option value="pending">Pending</option>
-                <option value="ongoing">Ongoing</option>
-                <option value="completed">Completed</option>
+                <option value="in-progress">In Progress</option>
+                <option value="Completed">Completed</option>
               </select>
             </div>
           </form>

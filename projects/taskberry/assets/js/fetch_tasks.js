@@ -20,7 +20,13 @@ $(document).ready(function () {
                     }</td>
                     <td class="text-center">${task.status}</td>
                     <td class="text-center">
-                        <button class="bg-gradient btn btn-success btn-sm btn-icon waves-effect waves-light edit-btn" style="margin: 3px">
+                        <button class="bg-gradient btn btn-success btn-sm btn-icon waves-effect waves-light edit-btn" style="margin: 3px" data-task-id="${
+                          task.id
+                        }" data-task-name="${
+          task.name
+        }" data-start-time="${startTime}" data-end-time="${endTime}" data-priority="${
+          task.priority
+        }" data-status="${task.status}">
                             <i class="fas fa-pencil-alt"></i>
                         </button>
                         <button class="bg-gradient btn btn-danger btn-sm btn-icon waves-effect waves-light delete-btn" style="margin: 3px" data-task-name="${
@@ -73,60 +79,65 @@ $(document).ready(function () {
 
   // Show the update task modal when the edit button is clicked
   $(document).on('click', '.edit-btn', function () {
-    var taskId = $(this).closest('tr').data('data-task-id')
+    var id = $(this).data('task-id')
+    var name = $(this).data('task-name')
+    var startTime = $(this).data('start-time')
+    var endTime = $(this).data('end-time')
+    var priority = $(this).data('priority')
+    var status = $(this).data('status')
 
-    // Fetch task details from the server
-    $.get('api/fetch_tasks.php', { id: taskId }, function (response) {
-      var res = JSON.parse(response)
-      if (res.success == '1') {
-        var task = res.task
-
-        // Populate the form fields with the task details
-        $('#update-task-id').val(task.id)
-        $('#update-task-name').val(task.name)
-        $('#update-start-time').val(task.starttime)
-        $('#update-end-time').val(task.endtime)
-        $('#update-priority').val(task.priority)
-        $('#update-status').val(task.status)
-
-        // Open the modal
-        $('#updateTaskModal').modal('show')
-      } else {
-        alert('Error fetching task details: ' + res.error)
-      }
-    })
-  })
-
-  // Handle the task update
-  $('#update-task-btn').click(function () {
-    var taskId = $('#update-task-id').val()
-    var taskName = $('#update-task-name').val()
-    var startTime = $('#update-start-time').val()
-    var endTime = $('#update-end-time').val()
-    var priority = $('#update-priority').val()
-    var status = $('#update-status').val()
-
-    // Send the update request to the server
-    $.post(
-      'api/update_task.php',
-      {
-        id: taskId,
-        name: taskName,
-        starttime: startTime,
-        endtime: endTime,
-        priority: priority,
-        status: status,
-      },
-      function (response) {
-        var res = JSON.parse(response)
-        if (res.success == '1') {
-          alert('Task updated successfully')
-          $('#updateTaskModal').modal('hide')
-          location.reload() // Reload the page or dynamically update the task in the table
-        } else {
-          alert('Error updating task: ' + res.error)
-        }
-      }
+    console.log(
+      `Edit btn: id: ${id}, name: ${name}, start_time: ${startTime}, end_time: ${endTime}, priority: ${priority}, status: ${status}`
     )
+    const formatForDateTimeLocal = (date) => {
+      const d = new Date(date)
+      return d.toISOString().slice(0, 16) // Extracts "YYYY-MM-DDTHH:MM"
+    }
+    console.log(
+      `start_time: ${formatForDateTimeLocal(
+        startTime
+      )}, end_time: ${formatForDateTimeLocal(endTime)}`
+    )
+
+    $('#update-task-name').val(name)
+    $('#update-start-time').val(formatForDateTimeLocal(startTime))
+    $('#update-end-time').val(formatForDateTimeLocal(endTime))
+    $('#update-priority').val(priority)
+    $('#update-status').val(status)
+
+    $('#updateTaskModal').modal('show')
   })
+
+  // // Handle the task update
+  // $('#update-task-btn').click(function () {
+  //   var taskId = $('#update-task-id').val()
+  //   var taskName = $('#update-task-name').val()
+  //   var startTime = $('#update-start-time').val()
+  //   var endTime = $('#update-end-time').val()
+  //   var priority = $('#update-priority').val()
+  //   var status = $('#update-status').val()
+
+  //   // Send the update request to the server
+  //   $.post(
+  //     'api/update_task.php',
+  //     {
+  //       id: taskId,
+  //       name: taskName,
+  //       starttime: startTime,
+  //       endtime: endTime,
+  //       priority: priority,
+  //       status: status,
+  //     },
+  //     function (response) {
+  //       var res = JSON.parse(response)
+  //       if (res.success == '1') {
+  //         alert('Task updated successfully')
+  //         $('#updateTaskModal').modal('hide')
+  //         location.reload() // Reload the page or dynamically update the task in the table
+  //       } else {
+  //         alert('Error updating task: ' + res.error)
+  //       }
+  //     }
+  //   )
+  // })
 })

@@ -1,7 +1,7 @@
 <?php
 include './connection.php';
 
-$sql = "SELECT * FROM tasks ORDER BY starttime DESC";
+$sql = "SELECT * FROM tasks ORDER BY created_at DESC";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
