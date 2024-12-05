@@ -30,10 +30,10 @@
       <div class="collapse navbar-collapse" id="navbar-supported-content">
         <ul class="nav nav-pills mx-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">In Progress</a>
+            <a href="home.php" class="nav-link active" aria-current="page">In Progress</a>
           </li>
           <li class="nav-item"><a href="#" class="nav-link">Completed</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Pomodoro</a></li>
+          <li class="nav-item"><a href="pomodoro.php" class="nav-link">Pomodoro</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Settings</a></li>
         </ul>
         <div class="btn-group">
