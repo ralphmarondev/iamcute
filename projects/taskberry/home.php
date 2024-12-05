@@ -50,7 +50,7 @@
             <div class="col-auto flex-grow-1">
               <input
                 type="text"
-                class="form-control form-control-sm"
+                class="form-control form-control-sm mb-3"
                 placeholder="Search Task"
                 id="search-task" />
             </div>
@@ -58,7 +58,7 @@
             <div class="col-auto">
               <button
                 type="button"
-                class="bg-gradient btn btn-success btn-sm btn-label waves-effect waves-light"
+                class="bg-gradient btn btn-success btn-sm btn-label waves-effect waves-light mb-3"
                 data-bs-toggle="modal"
                 data-bs-target="#newTaskModal">
                 <i class="fas fa-plus icon"></i>

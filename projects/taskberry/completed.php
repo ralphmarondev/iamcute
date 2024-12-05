@@ -50,7 +50,7 @@
             <div class="col-auto flex-grow-1">
               <input
                 type="text"
-                class="form-control form-control-sm"
+                class="form-control form-control-sm mb-3"
                 placeholder="Search Task"
                 id="search-task" />
             </div>
