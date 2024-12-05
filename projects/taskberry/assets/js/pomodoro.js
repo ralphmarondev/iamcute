@@ -66,6 +66,11 @@ $(document).ready(function () {
     updateTimerDisplay()
   })
 
+  $('#edit-btn').click(function () {
+    $('#timer-edit-form').removeClass('d-none')
+    $('#default-timer-display').addClass('d-none')
+  })
+
   // Update the timer based on user input (if needed)
   $('#set-time-btn').click(function () {
     minutes = $('#minutes').val()
