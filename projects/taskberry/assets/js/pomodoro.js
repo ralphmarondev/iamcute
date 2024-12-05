@@ -23,7 +23,21 @@ $(document).ready(function () {
         if (seconds === 0) {
           if (minutes === 0) {
             clearInterval(timer) // Stop the timer when it reaches 00:00
-            alert('Pomodoro session is over!')
+
+            if (Notification.permission !== 'granted') {
+              Notification.requestPermission().then((permission) => {
+                if (permission === 'granted') {
+                  // You can now show notifications
+                  new Notification('Pomodoro session is over!')
+                } else {
+                  alert('Pomodoro session is over!')
+                }
+              })
+            } else {
+              // Permission already granted, show the notification
+              new Notification('Pomodoro session is over!')
+            }
+
             isRunning = false
           } else {
             minutes--
