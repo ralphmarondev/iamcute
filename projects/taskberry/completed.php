@@ -41,13 +41,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar-supported-content">
-        <ul class="nav nav-pills mx-auto">
+        <ul class="navbar-nav mx-auto">
           <li class="nav-item">
             <a href="home.php" class="nav-link">In Progress</a>
           </li>
           <li class="nav-item"><a href="completed.php" class="nav-link active" aria-current="page">Completed</a></li>
           <li class="nav-item"><a href="pomodoro.php" class="nav-link">Pomodoro</a></li>
           <li class="nav-item"><a href="settings.php" class="nav-link">Settings</a></li>
+          <li class="nav-link mb-1"></li>
         </ul>
 
         <a href="index.php" class="btn btn-danger px-3">Logout</a>
