@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taskberry</title>
+  <title>Taskberry | Members</title>
   <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -24,15 +24,17 @@
       <div class="collapse navbar-collapse" id="navbarColor04">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home
-              <span class="visually-hidden">(current)</span>
+            <a class="nav-link" href="index.php">Home
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="members.php">Members</a>
+            <a class="nav-link" href="members.php">Members
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
+            <a class="nav-link active" href="about.php">About
+              <span class="visually-hidden">(current)</span>
+            </a>
           </li>
         </ul>
         <div class="d-flex">
@@ -42,24 +44,94 @@
     </div>
   </nav>
 
-  <!-- text and image content -->
-  <div class="d-flex align-items-center justify-content-center py-5" style="height: 100%;">
-    <div class="container">
-      <div class="row w-100">
-        <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
-          <div>
-            <h5 class="text-primary fw-bold fs-4">Taskberry: Your Fun & Focused Todo App</h5>
-            <p class="text-secondary">Get things done with Taskberry! 🍒 A cute and simple to-do app with a Pomodoro timer 🍅 to help you stay focused and take refreshing breaks. Tackle tasks, pick your berries, and boost your productivity—all while having fun! 🌱✨</p>
-            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#signInModal">Get Started</button>
+  <div class="container">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal text-body-emphasis">Taskberry</h1>
+      <p class="fs-5 text-body-secondary">
+        Taskberry was created by a group of 4th-year Computer Engineering students as part of our Online Technology course project. We designed it to make task management simple, efficient, and a bit more fun!
+      </p>
+    </div>
+
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Task Management</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Add, organize, and track your tasks easily.</li>
+                <li>Prioritize your to-dos and stay on top of deadlines.</li>
+                <li>Simple and intuitive task management for everyone!</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
-          <img src="assets/img/cute1.png" class="img-fluid rounded" alt="Image">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Pomodoro</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Boost productivity with timed work and break intervals.</li>
+                <li>Work for 25 minutes, then take a 5-minute break.</li>
+                <li>Stay focused and avoid burnout with the Pomodoro technique.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Responsive User Interface</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Taskberry works perfectly on any device.</li>
+                <li>Seamless experience across desktops, tablets, and phones.</li>
+                <li>Stay organized on-the-go with our responsive design.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </main>
 
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="assets/img/logo.png" alt="" width="24" height="19">
+          <small class="d-block mb-3 text-body-secondary">&copy; 2024 TaskBerry. All rights reserved.</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Task Management</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Pomodoro Timer</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Responsive UI</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Help Center</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">User Guide</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Links</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy Policy</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms of Service</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
   <!-- modals-->
   <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
