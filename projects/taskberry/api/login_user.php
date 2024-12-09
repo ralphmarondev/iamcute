@@ -6,14 +6,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = $mysqli->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+    $sql = $mysqli->prepare("SELECT id, fullname, username FROM users WHERE username = ? AND password = ?");
     $sql->bind_param("ss", $username, $password);
 
     $sql->execute();
     $result = $sql->get_result();
 
     if ($result->num_rows > 0) {
-      echo json_encode(['success' => '1', 'message' => 'Login successful']);
+      $user = $result->fetch_assoc();
+
+      echo json_encode([
+        'success' => '1',
+        'message' => 'Login successful',
+        'id' => $user['id'],
+        'fullname' => $user['fullname'],
+        'username' => $user['username']
+      ]);
     } else {
       echo json_encode(['success' => '0', 'error' => 'Invalid username or password']);
     }

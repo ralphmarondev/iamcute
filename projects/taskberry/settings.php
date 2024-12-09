@@ -39,10 +39,10 @@
       <div class="col-md-8">
         <div class="card shadow-sm p-4 mb-4">
           <h4 class="text-primary">Profile Information</h4>
-          <p><strong>Full Name:</strong> Ralph Maron Eda</p>
-          <p><strong>Username:</strong> ralphmaron</p>
+          <p><strong>Full Name:</strong> <span id="fullname">Ralph Maron Eda</span> </p>
+          <p><strong>Username:</strong> <span id="username">ralphmaron</span></p>
           <p><strong>Password:</strong> *****</p>
-          <button class="btn btn-primary">Edit Profile</button>
+          <button class="btn btn-primary" id="edit-profile">Edit Profile</button>
         </div>
       </div>
 
@@ -62,6 +62,19 @@
   <script src="assets/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      const user = JSON.parse(localStorage.getItem('user'))
+
+      if (user) {
+        $('#fullname').text(user.fullname)
+        $('#username').text(user.username)
+      } else {
+        console.log('No user data found.')
+      }
+    })
+  </script>
 </body>
 
 </html>

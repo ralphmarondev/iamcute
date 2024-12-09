@@ -17,6 +17,16 @@ $(document).ready(function () {
 
         if (res.success == '1') {
           alert('Login successful')
+
+          var user = {
+            id: res.id,
+            fullname: res.fullname,
+            username: res.username,
+            password: '******',
+          }
+
+          localStorage.setItem('user', JSON.stringify(user))
+
           $('#username').val('')
           $('#password').val('')
           window.location.href = 'home.php'
