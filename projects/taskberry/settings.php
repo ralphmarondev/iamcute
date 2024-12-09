@@ -42,7 +42,7 @@
           <p><strong>Full Name:</strong> <span id="fullname">Ralph Maron Eda</span> </p>
           <p><strong>Username:</strong> <span id="username">ralphmaron</span></p>
           <p><strong>Password:</strong> *****</p>
-          <button class="btn btn-primary" id="edit-profile">Edit Profile</button>
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#updateModal">Edit Profile</button>
         </div>
       </div>
 
@@ -59,6 +59,36 @@
     </div>
   </div>
 
+  <!-- modals -->
+  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateModalLabel">Profile Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="update-form">
+            <div class="mb-3">
+              <label for="updated-fullname" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="updated-fullname" placeholder="Enter new Full Name">
+            </div>
+            <div class="mb-3">
+              <label for="updated-username" class="form-label">Username or email</label>
+              <input type="email" class="form-control" id="updated-username" placeholder="Enter new email">
+            </div>
+            <div class="mb-3">
+              <label for="updated-password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="updated-password" placeholder="Create new password">
+            </div>
+            <div class="spacer mb-3"></div>
+            <button type="submit" class="btn btn-primary w-100" id="update-user-btn">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -66,13 +96,58 @@
   <script>
     $(document).ready(function() {
       const user = JSON.parse(localStorage.getItem('user'))
+      var id = -1
 
       if (user) {
         $('#fullname').text(user.fullname)
         $('#username').text(user.username)
+        id = user.id
+
+        $('#updated-fullname').val(user.fullname)
+        $('#updated-username').val(user.username)
       } else {
         console.log('No user data found.')
       }
+
+      $('#update-user-btn')
+        .off('click')
+        .on('click', function() {
+          let updatedUsername = $('#updated-username').val()
+          let updatedFullName = $('#updated-fullname').val()
+          let updatedPassword = $('#updated-password').val()
+
+          // alert(`Update click: fullname: ${updatedFullName}, username: ${updatedUsername}, password: ${updatedPassword}, id: ${id}`)
+
+          $.post(
+            'api/update_user.php', {
+              id: id,
+              fullname: updatedFullName,
+              username: updatedUsername,
+              password: updatedPassword
+            },
+            function(response) {
+              var res = JSON.parse(response)
+              if (res.success == '1') {
+                alert('User updated successfully')
+                // update localstorage
+                var user = {
+                  id: id,
+                  fullname: updatedFullName,
+                  username: updatedUsername,
+                  password: '******',
+                }
+
+                localStorage.setItem('user', JSON.stringify(user))
+
+
+                $('update-modal').modal('hide')
+                location.reload()
+              } else {
+                alert('Error updating user: ' + res.error)
+              }
+            }
+          )
+        })
     })
   </script>
 </body>
