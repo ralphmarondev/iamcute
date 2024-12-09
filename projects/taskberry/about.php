@@ -46,8 +46,8 @@
 
   <div class="container">
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal text-body-emphasis">Taskberry</h1>
-      <p class="fs-5 text-body-secondary">
+      <h1 class="display-4 fw-normal text-primary">Taskberry</h1>
+      <p class="fs-5 text-secondary">
         Taskberry was created by a group of 4th-year Computer Engineering students as part of our Online Technology course project. We designed it to make task management simple, efficient, and a bit more fun!
       </p>
     </div>

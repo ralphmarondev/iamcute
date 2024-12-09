@@ -33,6 +33,32 @@
     </div>
   </nav>
 
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <!-- Profile Info Section -->
+      <div class="col-md-8">
+        <div class="card shadow-sm p-4 mb-4">
+          <h4 class="text-primary">Profile Information</h4>
+          <p><strong>Full Name:</strong> Ralph Maron Eda</p>
+          <p><strong>Username:</strong> ralphmaron</p>
+          <p><strong>Password:</strong> *****</p>
+          <button class="btn btn-primary">Edit Profile</button>
+        </div>
+      </div>
+
+      <!-- Download Data Section -->
+      <div class="col-md-8">
+        <div class="card shadow-sm p-4">
+          <h4 class="text-primary">Download Your Data</h4>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-outline-secondary">Download as PDF</button>
+            <button class="btn btn-outline-secondary">Download as Excel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>

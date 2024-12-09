@@ -35,11 +35,11 @@
   </nav>
 
   <div class="container py-5 text-center">
-    <h2 class="mb-4">-Pomodoro Timer-</h2>
+    <h2 class="mb-4 text-primary">-Pomodoro Timer-</h2>
     <div class="card mx-auto shadow" style="max-width: 400px;">
       <div class="card-body">
         <!-- Timer Display -->
-        <div id="timer-display">
+        <div id="timer-display text-secondary">
           <h1 id="time" class="display-3 mb-3">15:00</h1>
           <p>Minutes : Seconds</p>
         </div>
