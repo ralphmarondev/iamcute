@@ -50,9 +50,16 @@
       <div class="col-md-8">
         <div class="card shadow-sm p-4">
           <h4 class="text-primary">Download Your Data</h4>
-          <div class="d-flex justify-content-between">
-            <button class="btn btn-outline-secondary">Download as PDF</button>
-            <button class="btn btn-outline-secondary">Download as Excel</button>
+          <div class="row">
+            <div class="col m-2 text-center">
+              <button class="btn btn-outline-secondary" id="download-pdf">Download as PDF</button>
+            </div>
+            <div class="col m-2 text-center">
+              <button class="btn btn-outline-secondary" id="download-csv">Download as CSV</button>
+            </div>
+            <div class="col m-2 text-center">
+              <button class="btn btn-outline-secondary" id="download-excel">Download as Excel</button>
+            </div>
           </div>
         </div>
       </div>
@@ -92,6 +99,13 @@
   <script src="assets/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- jsPDF (for generating PDF files) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- FileSaver.js (for saving files locally like CSV or Excel) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+  <script src="assets/js/download.js"></script>
 
   <script>
     $(document).ready(function() {
