@@ -9,6 +9,19 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/all.min.css">
+
+  <style>
+    @media (max-width: 768px) {
+
+      /* Hide this columns on mobile :> */
+      .task-details,
+      .task-time,
+      .task-priority,
+      .task-status {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -62,16 +75,16 @@
             style="width: 100%">
             <thead class="table-light text-muted">
               <tr>
-                <th class="sort" data-sort="pairs" scope="col" width="26%">
+                <th class="task-name sort" data-sort="pairs" scope="col" width="26%">
                   Task
                 </th>
-                <th scope="col" width="17%" class="text-center">
+                <th scope="col" width="17%" class="task-time text-center">
                   Start Time
                 </th>
-                <th class="text-center" scope="col" width="17%">End Time</th>
-                <th class="text-center" scope="col" width="12%">Priority</th>
-                <th class="text-center" scope="col" width="12%">Status</th>
-                <th class="text-center" scope="col" width="10%">Action</th>
+                <th class="task-time text-center" scope="col" width="17%">End Time</th>
+                <th class="task-priority text-center" scope="col" width="12%">Priority</th>
+                <th class="task-status text-center" scope="col" width="12%">Status</th>
+                <th class="task-action text-center" scope="col" width="10%">Action</th>
               </tr>
             </thead>
             <tbody class="list form-check-all">

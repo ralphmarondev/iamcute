@@ -16,14 +16,16 @@ $(document).ready(function () {
           var startTime = new Date(task.starttime).toLocaleString()
           var endTime = new Date(task.endtime).toLocaleString()
           var row = `<tr>
-            <td style="text-transform: capitalize">${task.name}</td>
-            <td class="text-center">${startTime}</td>
-            <td class="text-center">${endTime}</td>
-            <td class="text-center">${
+            <td class="task-name" style="text-transform: capitalize">${
+              task.name
+            }</td>
+            <td class="task-time text-center">${startTime}</td>
+            <td class="task-time text-center">${endTime}</td>
+            <td class="task-priority text-center">${
               task.priority.charAt(0).toUpperCase() + task.priority.slice(1)
             }</td>
-            <td class="text-center">${task.status}</td>
-            <td class="text-center">
+            <td class="task-status text-center">${task.status}</td>
+            <td class="task-action text-center">
               <button class="bg-gradient btn btn-success btn-sm btn-icon waves-effect waves-light edit-btn" style="margin: 3px" data-task-id="${
                 task.id
               }" data-task-name="${

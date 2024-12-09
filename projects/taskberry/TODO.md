@@ -1,7 +1,3 @@
-# IMPORTANT
-
-- Fix view for smaller screens.
-
 # HOME
 
 - IMPLEMENT PAGINATION
