@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taskberry | Members</title>
+  <title>Taskberry | About</title>
   <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -85,7 +85,7 @@
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm border-primary">
             <div class="card-header py-3 text-bg-primary border-primary">
-              <h4 class="my-0 fw-normal">Responsive User Interface</h4>
+              <h4 class="my-0 fw-normal">Responsive UI</h4>
             </div>
             <div class="card-body">
               <ul class="list-unstyled mt-3 mb-4">

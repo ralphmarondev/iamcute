@@ -8,6 +8,22 @@
   <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Add Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    .social-links a {
+      margin: 0 10px;
+      font-size: 30px;
+      color: #0077b5;
+      /* Default LinkedIn blue, change per icon color */
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #005f83;
+    }
+  </style>
 </head>
 
 <body>
@@ -43,8 +59,14 @@
     </div>
   </nav>
 
-  <!-- text and image content -->
-  <div class="d-flex align-items-center justify-content-center py-5" style="height: 100%;">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal text-body-emphasis"> Meet the TaskBerry Team! 🍇</h1>
+    <p class="fs-5 container text-body-secondary">
+      We’re a group of 4 passionate 4th-year Computer Engineering students, combining our coding skills and creativity to make productivity fun and efficient! When we’re not coding and debugging (with plenty of coffee!), we’re gaming and finding new ways to make tech work better for everyone. TaskBerry is our project to help you get things done while having fun! 🚀
+    </p>
+  </div>
+
+  <div class="d-flex align-items-center justify-content-center pb-5" style="height: 100%;">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -55,6 +77,12 @@
               class="img img-rounded"
               style="width: 240px; height: 240px; object-fit: cover; border-radius: 50%;">
             <h5 class="text-primary mt-3">Ralph Maron Eda</h5>
+            <div class="social-links">
+              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <small class="text-muted">Fun Fact: Sleeps like a pro, codes like a legend. 😴💻</small>
           </div>
         </div>
         <div class="col">
@@ -65,6 +93,12 @@
               class="img img-rounded"
               style="width: 240px; height: 240px; object-fit: cover; border-radius: 50%;">
             <h5 class="text-primary mt-3">Jack Cabiggayan</h5>
+            <div class="social-links">
+              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <small class="text-muted">Fun Fact: Can’t function without gaming breaks. 🎮</small>
           </div>
         </div>
         <div class="col">
@@ -75,6 +109,12 @@
               class="img img-rounded"
               style="width: 240px; height: 240px; object-fit: cover; border-radius: 50%;">
             <h5 class="text-primary mt-3">Triesha Mae Olunan</h5>
+            <div class="social-links">
+              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <small class="text-muted">Fun Fact: Master of power naps. 💤</small>
           </div>
         </div>
         <div class="col">
@@ -85,8 +125,49 @@
               class="img img-rounded"
               style="width: 240px; height: 240px; object-fit: cover; border-radius: 50%;">
             <h5 class="text-primary mt-3">Jezlyn Cabbab</h5>
+            <div class="social-links">
+              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <small class="text-muted">Fun Fact: Lives on snacks and caffeine. 🍫☕</small>
           </div>
         </div>
+      </div>
+
+      <div class="container">
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+          <div class="row">
+            <div class="col-12 col-md">
+              <img class="mb-2" src="assets/img/logo.png" alt="" width="24" height="19">
+              <small class="d-block mb-3 text-body-secondary">&copy; 2024 TaskBerry. All rights reserved.</small>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Features</h5>
+              <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Task Management</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Pomodoro Timer</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Responsive UI</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Help Center</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">User Guide</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Links</h5>
+              <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy Policy</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms of Service</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cookie Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
       </div>
 
       <!-- modals-->

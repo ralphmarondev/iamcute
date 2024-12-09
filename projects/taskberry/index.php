@@ -48,8 +48,8 @@
       <div class="row w-100">
         <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
           <div>
-            <h5 class="text-primary fw-bold fs-4">Taskberry: Your Fun & Focused Todo App</h5>
-            <p class="text-secondary">Get things done with Taskberry! 🍒 A cute and simple to-do app with a Pomodoro timer 🍅 to help you stay focused and take refreshing breaks. Tackle tasks, pick your berries, and boost your productivity—all while having fun! 🌱✨</p>
+            <h1 class="text-primary fw-bold">Taskberry: Your Fun & Focused Todo App</h1>
+            <p class="fs-5 text-secondary">Get things done with Taskberry! 🍒 A cute and simple to-do app with a Pomodoro timer 🍅 to help you stay focused and take refreshing breaks. Tackle tasks, pick your berries, and boost your productivity—all while having fun! 🌱✨</p>
             <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#signInModal">Get Started</button>
           </div>
         </div>
@@ -58,6 +58,41 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="container">
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="assets/img/logo.png" alt="" width="24" height="19">
+          <small class="d-block mb-3 text-body-secondary">&copy; 2024 TaskBerry. All rights reserved.</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Task Management</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Pomodoro Timer</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Responsive UI</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Help Center</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">User Guide</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Links</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy Policy</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms of Service</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <!-- modals-->
