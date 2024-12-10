@@ -19,10 +19,12 @@ $(document).ready(function () {
             <td style="task-name text-transform: capitalize">${task.name}</td>
             <td class="task-time text-center">${startTime}</td>
             <td class="task-time text-center">${endTime}</td>
-            <td class="task-priority text-center">${
+            <td class="task-priority text-center text-uppercase">${
               task.priority.charAt(0).toUpperCase() + task.priority.slice(1)
             }</td>
-            <td class="task-status text-center">${task.status}</td>
+            <td class="task-status text-center text-uppercase">${
+              task.status
+            }</td>
             <td class="task-action text-center">
               <button class="bg-gradient btn btn-success btn-sm btn-icon waves-effect waves-light edit-btn" style="margin: 3px" data-task-id="${
                 task.id

@@ -22,7 +22,7 @@ CREATE TABLE tasks (
     starttime DATETIME NOT NULL,        -- Start time of the task
     endtime DATETIME NOT NULL,          -- End time of the task
     priority ENUM('low', 'medium', 'high') NOT NULL,  -- Task priority (low, medium, high)
-    status ENUM('pending', 'in-progress', 'completed', 'overdue') NOT NULL,  -- Task status
+    status ENUM('in-progress', 'completed') NOT NULL,  -- Task status
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  -- Timestamp when the task was created
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP  -- Timestamp for when the task is last updated
 );
