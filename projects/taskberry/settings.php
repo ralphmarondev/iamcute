@@ -106,6 +106,8 @@
   <!-- FileSaver.js (for saving files locally like CSV or Excel) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
   <script src="assets/js/download.js"></script>
 
   <script>

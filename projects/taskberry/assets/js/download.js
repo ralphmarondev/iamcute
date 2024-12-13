@@ -7,22 +7,53 @@ function fetchTasks() {
   })
 }
 
+// Convert tasks to CSV using Papa Parse
+function convertToCSVWithPapa(tasks) {
+  // Format tasks to match expected headers
+  const formattedTasks = tasks.map((task) => ({
+    ID: task.id,
+    Name: task.name,
+    'Start Time': task.starttime,
+    'End Time': task.endtime,
+    Priority: task.priority,
+    Status: task.status,
+    'Created At': task.created_at,
+    'Updated At': task.updated_at,
+  }))
+
+  // Use Papa Parse to generate CSV
+  return Papa.unparse(formattedTasks)
+}
+
 // Convert tasks to CSV format
 function convertToCSV(tasks) {
-  const header = ['Task ID', 'Task Name', 'Due Date', 'Status', 'Created At']
+  const header = [
+    'ID',
+    'Name',
+    'Start Time',
+    'End Time',
+    'Priority',
+    'Status',
+    'Created At',
+    'Updated At',
+  ]
   let csv = header.join(',') + '\n'
 
   tasks.forEach((task) => {
     const row = [
-      task.task_id,
-      task.task_name,
-      task.due_date,
+      task.id,
+      task.name,
+      task.starttime,
+      task.endtime,
+      task.priority,
       task.status,
       task.created_at,
+      task.updated_at,
     ]
     csv += row.join(',') + '\n'
   })
 
+  console.log(csv)
   return csv
 }
 
@@ -70,6 +101,8 @@ function exportToExcel(tasks) {
 $(document).ready(function () {
   $('#download-pdf').click(function () {
     fetchTasks().then(function (data) {
+      console.log('Downloading as pdf...')
+      console.log(data)
       if (data.success === '1') {
         exportToPDF(data.tasks)
       } else {
@@ -79,24 +112,35 @@ $(document).ready(function () {
   })
 
   $('#download-csv').click(function () {
-    fetchTasks().then(function (data) {
-      if (data.success === '1') {
-        const csv = convertToCSV(data.tasks)
-        const blob = new Blob([csv], { type: 'text/csv' })
-        const url = URL.createObjectURL(blob)
-        const a = document.createElement('a')
-        a.href = url
-        a.download = 'tasks.csv'
-        a.click()
-        URL.revokeObjectURL(url)
-      } else {
-        alert(data.error)
-      }
-    })
+    // fetchTasks()
+    //   .then(function (data) {
+    //     console.log('Downloading as csv...')
+    //     console.log(data)
+    //     if (data.success === '1') {
+    //       const csv = convertToCSVWithPapa(data.tasks)
+    //       const blob = new Blob([csv], { type: 'text/csv' })
+    //       const url = URL.createObjectURL(blob)
+    //       const a = document.createElement('a')
+    //       a.href = url
+    //       a.download = 'tasks.csv'
+    //       a.click()
+    //       URL.revokeObjectURL(url)
+    //     } else {
+    //       alert(data.error || 'An unexpected error occured.')
+    //       console.error(data.error)
+    //     }
+    //   })
+    //   .catch(function (error) {
+    //     console.error('Failed to fetch tasks:', error)
+    //     alert('Failed to fetch tasks. Please try again later.')
+    //   })
+    window.location.href = 'api/download/download_csv.php'
   })
 
   $('#download-excel').click(function () {
     fetchTasks().then(function (data) {
+      console.log('Downloading as excel...')
+      console.log(data)
       if (data.success === '1') {
         exportToExcel(data.tasks)
       } else {
