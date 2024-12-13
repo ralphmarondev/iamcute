@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root"; // Change username
-$password = ""; // Change password
-$dbname = "taskberry"; // Change database name
+$username = "root";
+$password = "";
+$dbname = "taskberry";
 
 $mysqli = new mysqli($servername, $username, $password, $dbname);
 
