@@ -13,8 +13,21 @@ $(document).ready(function () {
         tableBody.empty()
 
         tasks.forEach((task) => {
-          var startTime = new Date(task.starttime).toLocaleString()
-          var endTime = new Date(task.endtime).toLocaleString()
+          const formatForDateTimeLocal = (date) => {
+            const d = new Date(date)
+            const options = {
+              month: '2-digit',
+              day: '2-digit',
+              year: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: true, // Ensures AM/PM format
+            }
+            return d.toLocaleString('en-US', options)
+          }
+
+          var startTime = formatForDateTimeLocal(task.starttime)
+          var endTime = formatForDateTimeLocal(task.endtime)
           var row = `<tr>
             <td class="task-name" style="text-transform: capitalize">${
               task.name
@@ -107,6 +120,10 @@ $(document).ready(function () {
       const d = new Date(date)
       return d.toISOString().slice(0, 16) // Extracts "YYYY-MM-DDTHH:MM"
     }
+
+    // Example usage:
+    const date = '2024-12-19T22:53:00'
+    console.log(formatForDisplay(date))
 
     $('#update-task-name').val(name)
     $('#update-start-time').val(formatForDateTimeLocal(startTime))

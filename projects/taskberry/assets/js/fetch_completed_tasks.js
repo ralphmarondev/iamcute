@@ -13,8 +13,21 @@ $(document).ready(function () {
         tableBody.empty()
 
         tasks.forEach((task) => {
-          var startTime = new Date(task.starttime).toLocaleString()
-          var endTime = new Date(task.endtime).toLocaleString()
+          const formatForDateTimeLocal = (date) => {
+            const d = new Date(date)
+            const options = {
+              month: '2-digit',
+              day: '2-digit',
+              year: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: true, // Ensures AM/PM format
+            }
+            return d.toLocaleString('en-US', options)
+          }
+
+          var startTime = formatForDateTimeLocal(task.starttime)
+          var endTime = formatForDateTimeLocal(task.endtime)
           var row = `<tr>
             <td style="task-name text-transform: capitalize">${task.name}</td>
             <td class="task-time text-center">${startTime}</td>
