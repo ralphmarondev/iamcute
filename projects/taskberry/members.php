@@ -60,7 +60,7 @@
   </nav>
 
   <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-    <h1 class="display-4 fw-normal text-primary"> Meet the TaskBerry Team! 🍇</h1>
+    <h1 class="display-4 fw-normal text-primary"> Meet the TaskBerry Team!</h1>
     <p class="fs-5 container text-secondary">
       We’re a group of 4 passionate 4th-year Computer Engineering students, combining our coding skills and creativity to make productivity fun and efficient! When we’re not coding and debugging (with plenty of coffee!), we’re gaming and finding new ways to make tech work better for everyone. TaskBerry is our project to help you get things done while having fun! 🚀
     </p>

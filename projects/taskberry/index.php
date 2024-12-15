@@ -49,7 +49,7 @@
         <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
           <div>
             <h1 class="text-primary fw-bold">Taskberry: Your Fun & Focused Todo App</h1>
-            <p class="fs-5 text-secondary">Get things done with Taskberry! 🍒 A cute and simple to-do app with a Pomodoro timer 🍅 to help you stay focused and take refreshing breaks. Tackle tasks, pick your berries, and boost your productivity—all while having fun! 🌱✨</p>
+            <p class="fs-5 text-secondary">Get things done with Taskberry! A cute and simple to-do app with a Pomodoro timer to help you stay focused and take refreshing breaks. Tackle tasks, pick your berries, and boost your productivity—all while having fun!</p>
             <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#signInModal">Get Started</button>
           </div>
         </div>
