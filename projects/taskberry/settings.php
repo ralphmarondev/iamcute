@@ -42,7 +42,7 @@
           <h4 class="text-primary">Profile Information</h4>
           <p><strong>Full Name:</strong> <span id="fullname">Ralph Maron Eda</span> </p>
           <p><strong>Username:</strong> <span id="username">ralphmaron</span></p>
-          <p><strong>Password:</strong> *****</p>
+          <p><strong>Password:</strong> ********</p>
           <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#updateModal">Edit Profile</button>
         </div>
       </div>
@@ -86,7 +86,7 @@
               <input type="email" class="form-control" id="updated-username" placeholder="Enter new email">
             </div>
             <div class="mb-3">
-              <label for="updated-password" class="form-label">Password</label>
+              <label for="updated-password" class="form-label">New Password</label>
               <input type="password" class="form-control" id="updated-password" placeholder="Create new password">
             </div>
             <div class="spacer mb-3"></div>
@@ -127,7 +127,11 @@
           let updatedFullName = $('#updated-fullname').val()
           let updatedPassword = $('#updated-password').val()
 
-          // alert(`Update click: fullname: ${updatedFullName}, username: ${updatedUsername}, password: ${updatedPassword}, id: ${id}`)
+          // If username, fullname or password is empty, we will not update it.
+          if (!updatedUsername || !updatedFullName || !updatedPassword) {
+            alert('Please fill in all fields!')
+            return;
+          }
 
           $.post(
             'api/update_user.php', {
@@ -145,7 +149,7 @@
                   id: id,
                   fullname: updatedFullName,
                   username: updatedUsername,
-                  password: '******',
+                  password: '********', // we are not storing password on localstorage for security reasons.
                 }
 
                 localStorage.setItem('user', JSON.stringify(user))
