@@ -50,11 +50,11 @@
           <div class="row mb-3">
             <div class="col">
               <label for="minutes" class="form-label">Minutes</label>
-              <input type="number" id="minutes" class="form-control" min="0" max="60" value="14" />
+              <input type="number" id="minutes" class="form-control text-center" min="0" max="60" value="14" />
             </div>
             <div class="col">
               <label for="seconds" class="form-label">Seconds</label>
-              <input type="number" id="seconds" class="form-control" min="0" max="59" value="59" />
+              <input type="number" id="seconds" class="form-control text-center" min="0" max="59" value="59" />
             </div>
           </div>
           <div class="d-flex justify-content-around">
