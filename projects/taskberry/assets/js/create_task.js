@@ -26,6 +26,8 @@ $(document).ready(function () {
     console.log(`End time: ${endTime}`)
     console.log(`Priority: ${priority}`)
 
+    const user = JSON.parse(localStorage.getItem('user'))
+
     $.post(
       'api/create_task.php',
       {
@@ -33,6 +35,7 @@ $(document).ready(function () {
         starttime: startTime,
         endtime: endTime,
         priority: priority,
+        createdby: user.username,
       },
       function (response) {
         var res = JSON.parse(response)
