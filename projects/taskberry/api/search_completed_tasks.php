@@ -1,9 +1,10 @@
 <?php
 include './connection.php';
 
-if (isset($_GET['search'])) {
-  $search = $mysqli->real_escape_string($_GET['search']);
-  $sql = "SELECT * FROM tasks WHERE name LIKE '%$search%' AND status = 'completed' ORDER BY created_at DESC";
+if (!empty($_POST['search']) && !empty($_POST['createdby'])) {
+  $search = $mysqli->real_escape_string($_POST['search']);
+  $createdby = $mysqli->real_escape_string($_POST['createdby']);
+  $sql = "SELECT * FROM tasks WHERE name LIKE '%$search%' AND status = 'completed' AND createdby = '$createdby' ORDER BY created_at DESC";
   $result = $mysqli->query($sql);
 
   if ($result->num_rows > 0) {

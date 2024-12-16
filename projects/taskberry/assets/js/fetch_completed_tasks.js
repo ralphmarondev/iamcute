@@ -1,34 +1,38 @@
 $(document).ready(function () {
-  function fetchTasks(query = '') {
+  function fetchTasks(query, createdby) {
     let endpoint = query
       ? 'api/search_completed_tasks.php'
       : 'api/fetch_completed_tasks.php'
 
-    $.get(endpoint, { search: query }, function (response) {
-      var res = JSON.parse(response)
+    $.post(
+      endpoint,
+      { search: query, createdby: createdby },
+      function (response) {
+        var res = JSON.parse(response)
+        console.log(res)
 
-      if (res.success == '1') {
-        var tasks = res.tasks
-        var tableBody = $('#alternative-pagination tbody')
-        tableBody.empty()
+        if (res.success == '1') {
+          var tasks = res.tasks
+          var tableBody = $('#alternative-pagination tbody')
+          tableBody.empty()
 
-        tasks.forEach((task) => {
-          const formatForDateTimeLocal = (date) => {
-            const d = new Date(date)
-            const options = {
-              month: '2-digit',
-              day: '2-digit',
-              year: 'numeric',
-              hour: '2-digit',
-              minute: '2-digit',
-              hour12: true, // Ensures AM/PM format
+          tasks.forEach((task) => {
+            const formatForDateTimeLocal = (date) => {
+              const d = new Date(date)
+              const options = {
+                month: '2-digit',
+                day: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true, // Ensures AM/PM format
+              }
+              return d.toLocaleString('en-US', options)
             }
-            return d.toLocaleString('en-US', options)
-          }
 
-          var startTime = formatForDateTimeLocal(task.starttime)
-          var endTime = formatForDateTimeLocal(task.endtime)
-          var row = `<tr>
+            var startTime = formatForDateTimeLocal(task.starttime)
+            var endTime = formatForDateTimeLocal(task.endtime)
+            var row = `<tr>
             <td style="task-name text-transform: capitalize">${task.name}</td>
             <td class="task-time text-center">${startTime}</td>
             <td class="task-time text-center">${endTime}</td>
@@ -42,10 +46,10 @@ $(document).ready(function () {
               <button class="bg-gradient btn btn-success btn-sm btn-icon waves-effect waves-light edit-btn" style="margin: 3px" data-task-id="${
                 task.id
               }" data-task-name="${
-            task.name
-          }" data-start-time="${startTime}" data-end-time="${endTime}" data-priority="${
-            task.priority
-          }" data-status="${task.status}">
+              task.name
+            }" data-start-time="${startTime}" data-end-time="${endTime}" data-priority="${
+              task.priority
+            }" data-status="${task.status}">
                 <i class="fas fa-pencil-alt"></i>
               </button>
               <button class="bg-gradient btn btn-danger btn-sm btn-icon waves-effect waves-light delete-btn" style="margin: 3px" data-task-name="${
@@ -56,28 +60,40 @@ $(document).ready(function () {
               </button>
             </td>
           </tr>`
-          tableBody.append(row)
-        })
-      } else {
-        console.log('Error fetching tasks:', res.error)
+            tableBody.append(row)
+          })
+        } else {
+          console.log('Error fetching tasks:', res.error)
+          var tableBody = $('#alternative-pagination tbody')
+          tableBody.empty()
+          tableBody.html(`
+              <tr>
+                <td colspan="6" class="text-center">No data found</td>
+              </tr>
+            `)
+        }
       }
-    })
+    )
   }
 
   // fetch tasks initially
-  fetchTasks()
+  const user = JSON.parse(localStorage.getItem('user'))
+  fetchTasks('', user.username)
+  console.log(`Current user: ${user.username}`)
 
   // listen for input in the search field
   $('#search-task').on('input', function () {
     let query = $(this).val().trim()
     console.log(query)
-    fetchTasks(query)
+    fetchTasks(query, user.username)
   })
 
   // Show the delete confirmation modal
   $(document).on('click', '.delete-btn', function () {
     var taskName = $(this).data('task-name')
     var taskPriority = $(this).data('task-priority')
+    var taskId = $(this).data('task-id')
+    const user = JSON.parse(localStorage.getItem('user'))
 
     // Set the task name and priority in the modal
     $('#delete-task-name').text(`Task: ${taskName}`)
@@ -91,17 +107,21 @@ $(document).ready(function () {
       .off('click')
       .on('click', function () {
         // Send delete request to the server
-        $.post('api/delete_task.php', { name: taskName }, function (response) {
-          var res = JSON.parse(response)
+        $.post(
+          'api/delete_task.php',
+          { id: taskId, createdby: user.username },
+          function (response) {
+            var res = JSON.parse(response)
 
-          if (res.success == '1') {
-            alert('Task deleted successfully')
-            $('#deleteConfirmationModal').modal('hide')
-            location.reload()
-          } else {
-            alert('Error deleting task: ' + res.error)
+            if (res.success == '1') {
+              alert('Task deleted successfully')
+              $('#deleteConfirmationModal').modal('hide')
+              location.reload()
+            } else {
+              alert('Error deleting task: ' + res.error)
+            }
           }
-        })
+        )
       })
   })
 
@@ -137,6 +157,7 @@ $(document).ready(function () {
         let updatedName = $('#update-task-name').val()
         let updatedPriority = $('#update-priority').val()
         let updatedStatus = $('#update-status').val()
+        const user = JSON.parse(localStorage.getItem('user'))
 
         $.post(
           'api/update_task.php',
@@ -147,6 +168,7 @@ $(document).ready(function () {
             endtime: updatedEndTime,
             priority: updatedPriority,
             status: updatedStatus,
+            createdby: user.username,
           },
           function (response) {
             var res = JSON.parse(response)
