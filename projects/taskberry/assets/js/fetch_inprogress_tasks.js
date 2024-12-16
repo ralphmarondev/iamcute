@@ -29,9 +29,7 @@ $(document).ready(function () {
           var startTime = formatForDateTimeLocal(task.starttime)
           var endTime = formatForDateTimeLocal(task.endtime)
           var row = `<tr>
-            <td class="task-name" style="text-transform: capitalize">${
-              task.name
-            }</td>
+            <td style="task-name text-transform: capitalize">${task.name}</td>
             <td class="task-time text-center">${startTime}</td>
             <td class="task-time text-center">${endTime}</td>
             <td class="task-priority text-center text-uppercase">${
@@ -120,10 +118,6 @@ $(document).ready(function () {
       const d = new Date(date)
       return d.toISOString().slice(0, 16) // Extracts "YYYY-MM-DDTHH:MM"
     }
-
-    // Example usage:
-    const date = '2024-12-19T22:53:00'
-    console.log(formatForDisplay(date))
 
     $('#update-task-name').val(name)
     $('#update-start-time').val(formatForDateTimeLocal(startTime))
