@@ -195,7 +195,7 @@
                   <input type="password" class="form-control" id="signUpPassword" placeholder="Create a password">
                 </div>
                 <div class="spacer mb-3"></div>
-                <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                <button type="submit" class="btn btn-success w-100">Sign Up</button>
               </form>
             </div>
           </div>

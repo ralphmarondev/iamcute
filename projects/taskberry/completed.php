@@ -11,6 +11,16 @@
   <link rel="stylesheet" href="assets/css/all.min.css">
 
   <style>
+    .btn-logout {
+      background: #d90c6c;
+      color: white;
+    }
+
+    .btn-logout:hover {
+      background: #b90559;
+      color: white;
+    }
+
     @media (max-width: 768px) {
 
       /* Hide this columns on mobile :> */
@@ -51,7 +61,7 @@
           <li class="nav-link mb-1"></li>
         </ul>
 
-        <a href="index.php" class="btn btn-danger px-3">Logout</a>
+        <a href="index.php" class="btn btn-logout px-3">Logout</a>
       </div>
     </div>
   </nav>

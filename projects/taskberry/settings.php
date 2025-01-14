@@ -9,6 +9,17 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/all.min.css">
+  <style>
+    .btn-logout {
+      background: #d90c6c;
+      color: white;
+    }
+
+    .btn-logout:hover {
+      background: #b90559;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,7 +40,7 @@
           <li class="nav-item"><a href="settings.php" class="nav-link active" aria-current="page">Settings</a></li>
           <li class="nav-link mb-1"></li>
         </ul>
-        <a href="index.php" class="btn btn-danger px-3">Logout</a>
+        <a href="index.php" class="btn btn-logout px-3">Logout</a>
       </div>
     </div>
   </nav>
