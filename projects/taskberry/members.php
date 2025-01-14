@@ -66,11 +66,13 @@
       <div class="row">
         <div class="col mb-3">
           <div class="text-center border shadow p-4" data-aos="fade-down-right" data-aos-duration="1000">
-            <img
-              src="assets/img/ralphmaron2.png"
-              alt="Image"
-              class="img img-rounded"
-              style="width: 240px; height: 240px; object-fit: cover; border-radius: 50%;">
+            <a href="portfolio/ralphmaron/ralphmaron.php">
+              <img
+                src="assets/img/ralphmaron2.png"
+                alt="Image"
+                class="img img-rounded"
+                style="width: 240px; height: 240px; object-fit: cover; border-radius: 50%;">
+            </a>
             <h5 class="text-primary mt-3">Ralph Maron Eda</h5>
             <div class="social-links mb-3">
               <a href="https://www.linkedin.com/in/ralph-maron-eda-95a014250/" target="_blank"><img src="assets/img/linkedin.png" alt="LinkedIn" style="width: 28px; height: 28px; object-fit: cover;"></a>
