@@ -9,6 +9,120 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/aos.css">
+  <style>
+    .anim-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .anim-element img {
+      height: 34px;
+      width: 34px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .anim-elements .anim-element {
+      position: absolute;
+      font-size: 30px;
+    }
+
+    .anim-elements .anim-element:nth-child(1) {
+      top: 12%;
+      left: 15%;
+      color: var(--primary-color);
+      animation: aniOne 13s infinite linear alternate;
+    }
+
+    .anim-elements .anim-element:nth-child(2) {
+      bottom: 15%;
+      left: 45%;
+      animation: aniTwo 13s infinite linear alternate;
+    }
+
+    .anim-elements .anim-element:nth-child(3) {
+      bottom: 20%;
+      left: 30%;
+      color: var(--primary-color);
+      animation: aniThree 13s infinite linear alternate;
+    }
+
+    .anim-elements .anim-element:nth-child(4) {
+      bottom: 15%;
+      right: 25%;
+      color: var(--primary-color);
+      animation: aniFour 13s infinite linear alternate;
+    }
+
+    @keyframes aniOne {
+      0% {
+        transform: translate(0, 0) rotate(0);
+      }
+
+      40% {
+        transform: translate(141px, 72px) rotate(75deg);
+      }
+
+      80% {
+        transform: translate(-40px, 72px) rotate(145deg);
+      }
+
+      100% {
+        transform: translate(0, 0) rotate(0);
+      }
+    }
+
+    @keyframes aniTwo {
+      0% {
+        transform: translate(0, 0) rotate(0) scale(1);
+      }
+
+      40% {
+        transform: translate(73px, -1px) rotate(36deg) scale(0.9);
+      }
+
+      80% {
+        transform: translate(83px, 122px) rotate(108deg) scale(1.2);
+      }
+
+      100% {
+        transform: translate(0, 0) rotate(0) scale(1);
+      }
+    }
+
+    @keyframes aniThree {
+      0% {
+        transform: translate(-300px, 151px) rotate(0);
+      }
+
+      100% {
+        transform: translate(251px, -200px) rotate(180deg);
+      }
+    }
+
+    @keyframes aniFour {
+      0% {
+        transform: translate(61px, -99px) rotate(0);
+      }
+
+      20% {
+        transform: translate(4px, -190px) rotate(38deg);
+      }
+
+      60% {
+        transform: translate(-263px, -164px) rotate(108deg);
+      }
+
+      100% {
+        transform: translate(-1px, 0) rotate(180deg);
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -58,6 +172,14 @@
           <img src="assets/img/cute1.jpg" class="img-fluid rounded" alt="Image">
         </div>
       </div>
+    </div>
+
+    <!-- Animated images -->
+    <div class="anim-elements">
+      <div class="anim-element"><img src="assets/img/ralphmaron2.png" class="animated-img ralph" alt="Ralph"></div>
+      <div class="anim-element"><img src="assets/img/jezlyn2.jpg" class="animated-img jezlyn" alt="Jezlyn"></div>
+      <div class="anim-element"><img src="assets/img/triesha2.jpg" class="animated-img triesha" alt="Triesha"></div>
+      <div class="anim-element"><img src="assets/img/jack2.jpg" class="animated-img jack" alt="Jack"></div>
     </div>
   </div>
 
