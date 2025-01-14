@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
 </head>
 
 <body>
@@ -45,7 +46,7 @@
   </nav>
 
   <div class="container">
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center" data-aos="fade-down" data-aos-duration="1000">
       <h1 class="display-4 fw-normal text-primary">Taskberry</h1>
       <p class="fs-5 text-secondary">
         Taskberry was created by a group of 4th-year Computer Engineering students as part of our Online Technology course project. We designed it to make task management simple, efficient, and a bit more fun!
@@ -53,7 +54,7 @@
     </div>
 
     <main>
-      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" data-aos="fade-down-right" data-aos-duration="1000">
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm border-primary">
             <div class="card-header py-3 text-bg-primary border-primary">
@@ -69,7 +70,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary" data-aos="fade-right" data-aos-duration="1000">
             <div class="card-header py-3 text-bg-primary border-primary">
               <h4 class="my-0 fw-normal">Pomodoro</h4>
             </div>
@@ -83,7 +84,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary" data-aos="fade-left" data-aos-duration="1000">
             <div class="card-header py-3 text-bg-primary border-primary">
               <h4 class="my-0 fw-normal">Responsive UI</h4>
             </div>
@@ -99,7 +100,7 @@
       </div>
     </main>
 
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <footer class="pt-4 my-md-5 pt-md-5 border-top" data-aos="fade-up" data-aos-duration="1000">
       <div class="row">
         <div class="col-12 col-md">
           <img class="mb-2" src="assets/img/logo.png" alt="" width="24" height="19">
@@ -211,6 +212,11 @@
   <script src="assets/js//bootstrap.bundle.min.js"></script>
   <script src="assets/js/login_user.js"></script>
   <script src="assets/js/register_user.js"></script>
+  <script src="assets/js/aos.js"></script>
+
+  <script>
+    AOS.init()
+  </script>
 </body>
 
 </html>

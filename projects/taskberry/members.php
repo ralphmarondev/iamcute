@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
   <style>
     .social-links a img {
       transition: box-shadow 0.3s ease-in-out;
@@ -53,7 +54,7 @@
     </div>
   </nav>
 
-  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center" data-aos="fade-down" data-aos-duration="1000">
     <h1 class="display-4 fw-normal text-primary"> Meet the TaskBerry Team!</h1>
     <p class="fs-5 container text-secondary">
       We’re a group of 4 passionate 4th-year Computer Engineering students, combining our coding skills and creativity to make productivity fun and efficient! When we’re not coding and debugging (with plenty of coffee!), we’re gaming and finding new ways to make tech work better for everyone. TaskBerry is our project to help you get things done while having fun! 🚀
@@ -63,8 +64,8 @@
   <div class="d-flex align-items-center justify-content-center pb-5" style="height: 100%;">
     <div class="container">
       <div class="row">
-        <div class="col">
-          <div class="text-center border shadow p-4">
+        <div class="col mb-3">
+          <div class="text-center border shadow p-4" data-aos="fade-down-right" data-aos-duration="1000">
             <img
               src="assets/img/ralphmaron2.png"
               alt="Image"
@@ -79,8 +80,8 @@
             <small class="text-muted">Fun Fact: Sleeps like a pro, codes like a legend. 😴💻</small>
           </div>
         </div>
-        <div class="col">
-          <div class="text-center border shadow p-4">
+        <div class="col mb-3">
+          <div class="text-center border shadow p-4" data-aos="fade-right" data-aos-duration="1000">
             <img
               src="assets/img/jack2.jpg"
               alt="Image"
@@ -95,8 +96,8 @@
             <small class="text-muted">Fun Fact: Can’t function without gaming breaks. 🎮</small>
           </div>
         </div>
-        <div class="col">
-          <div class="text-center border shadow p-4">
+        <div class="col mb-3">
+          <div class="text-center border shadow p-4" data-aos="fade-left" data-aos-duration="1000">
             <img
               src="assets/img/triesha2.jpg"
               alt="Image"
@@ -111,8 +112,8 @@
             <small class="text-muted">Fun Fact: Master of power naps. 💤</small>
           </div>
         </div>
-        <div class="col">
-          <div class="text-center border shadow p-4">
+        <div class="col mb-3">
+          <div class="text-center border shadow p-4" data-aos="fade-down" data-aos-duration="1000">
             <img
               src="assets/img/jezlyn2.jpg"
               alt="Image"
@@ -130,7 +131,7 @@
       </div>
 
       <div class="container">
-        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <footer class="pt-4 my-md-5 pt-md-5 border-top" data-aos="fade-up" data-aos-duration="1000">
           <div class="row">
             <div class="col-12 col-md">
               <img class="mb-2" src="assets/img/logo.png" alt="" width="24" height="19">
@@ -241,8 +242,13 @@
       <script src="assets/js/jquery.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
       <script src="assets/js//bootstrap.bundle.min.js"></script>
+      <script src="assets/js/aos.js"></script>
       <script src="assets/js/login_user.js"></script>
       <script src="assets/js/register_user.js"></script>
+
+      <script>
+        AOS.init()
+      </script>
 </body>
 
 </html>

@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
 </head>
 
 <body>
@@ -46,14 +47,14 @@
   <div class="d-flex align-items-center justify-content-center py-5" style="height: 100%;">
     <div class="container">
       <div class="row w-100">
-        <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
+        <div class="col-md-6 d-flex justify-content-center align-items-center mb-3" data-aos="fade-down" data-aos-duration="1000">
           <div>
             <h1 class="text-primary fw-bold">Taskberry: Your Fun & Focused Todo App</h1>
             <p class="fs-5 text-secondary">Get things done with Taskberry! A cute and simple to-do app with a Pomodoro timer to help you stay focused and take refreshing breaks. Tackle tasks, pick your berries, and boost your productivity—all while having fun!</p>
             <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#signInModal">Get Started</button>
           </div>
         </div>
-        <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
+        <div class="col-md-6 d-flex justify-content-center align-items-center mb-3" data-aos="fade-down-right" data-aos-duration="1000">
           <img src="assets/img/cute1.jpg" class="img-fluid rounded" alt="Image">
         </div>
       </div>
@@ -61,7 +62,7 @@
   </div>
 
   <div class="container">
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <footer class="pt-4 my-md-5 pt-md-5 border-top" data-aos="fade-up" data-aos-duration="1000">
       <div class="row">
         <div class="col-12 col-md">
           <img class="mb-2" src="assets/img/logo.png" alt="" width="24" height="19">
@@ -172,8 +173,13 @@
   <script src="assets/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="assets/js//bootstrap.bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
   <script src="assets/js/login_user.js"></script>
   <script src="assets/js/register_user.js"></script>
+
+  <script>
+    AOS.init()
+  </script>
 </body>
 
 </html>
