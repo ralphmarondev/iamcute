@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
-          <img src="assets/img/cute1.png" class="img-fluid rounded" alt="Image">
+          <img src="assets/img/cute1.jpg" class="img-fluid rounded" alt="Image">
         </div>
       </div>
     </div>

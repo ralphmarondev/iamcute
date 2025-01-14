@@ -8,21 +8,8 @@
   <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <!-- Add Font Awesome CDN -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
   <style>
-    .social-links a {
-      margin: 0 10px;
-      font-size: 30px;
-      color: #0077b5;
-      /* Default LinkedIn blue, change per icon color */
-      text-decoration: none;
-    }
 
-    .social-links a:hover {
-      color: #005f83;
-    }
   </style>
 </head>
 
@@ -72,15 +59,15 @@
         <div class="col">
           <div class="text-center border shadow p-4">
             <img
-              src="assets/img/ralphmaron.jpg"
+              src="assets/img/ralphmaron2.png"
               alt="Image"
               class="img img-rounded"
               style="width: 240px; height: 240px; object-fit: cover; border-radius: 50%;">
             <h5 class="text-primary mt-3">Ralph Maron Eda</h5>
-            <div class="social-links">
-              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <div class="social-links mb-3">
+              <a href="https://linkedin.com" target="_blank"><img src="assets/img/linkedin.png" alt="LinkedIn" style="width: 28px; height: 28px; object-fit: cover;"></a>
+              <a href="https://github.com" target="_blank"><img src="assets/img/instagram.png" alt="Instagram" style="width: 28px; height: 28px; object-fit: cover;"></a>
+              <a href="https://twitter.com" target="_blank"><img src="assets/img/facebook.png" alt="Facebook" style="width: 28px; height: 28px; object-fit: cover;"></a>
             </div>
             <small class="text-muted">Fun Fact: Sleeps like a pro, codes like a legend. 😴💻</small>
           </div>
@@ -88,15 +75,15 @@
         <div class="col">
           <div class="text-center border shadow p-4">
             <img
-              src="assets/img/jack.jpg"
+              src="assets/img/jack2.jpg"
               alt="Image"
               class="img img-rounded"
               style="width: 240px; height: 240px; object-fit: cover; border-radius: 50%;">
             <h5 class="text-primary mt-3">Jack Cabiggayan</h5>
-            <div class="social-links">
-              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <div class="social-links mb-3">
+              <a href="https://linkedin.com" target="_blank"><img src="assets/img/linkedin.png" alt="LinkedIn" style="width: 28px; height: 28px; object-fit: cover;"></a>
+              <a href="https://github.com" target="_blank"><img src="assets/img/instagram.png" alt="Instagram" style="width: 28px; height: 28px; object-fit: cover;"></a>
+              <a href="https://twitter.com" target="_blank"><img src="assets/img/facebook.png" alt="Facebook" style="width: 28px; height: 28px; object-fit: cover;"></a>
             </div>
             <small class="text-muted">Fun Fact: Can’t function without gaming breaks. 🎮</small>
           </div>
@@ -104,15 +91,15 @@
         <div class="col">
           <div class="text-center border shadow p-4">
             <img
-              src="assets/img/triesha.jpg"
+              src="assets/img/triesha2.jpg"
               alt="Image"
               class="img img-rounded"
               style="width: 240px; height: 240px; object-fit: cover; border-radius: 50%;">
             <h5 class="text-primary mt-3">Triesha Mae Olunan</h5>
-            <div class="social-links">
-              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <div class="social-links mb-3">
+              <a href="https://linkedin.com" target="_blank"><img src="assets/img/linkedin.png" alt="LinkedIn" style="width: 28px; height: 28px; object-fit: cover;"></a>
+              <a href="https://github.com" target="_blank"><img src="assets/img/instagram.png" alt="Instagram" style="width: 28px; height: 28px; object-fit: cover;"></a>
+              <a href="https://twitter.com" target="_blank"><img src="assets/img/facebook.png" alt="Facebook" style="width: 28px; height: 28px; object-fit: cover;"></a>
             </div>
             <small class="text-muted">Fun Fact: Master of power naps. 💤</small>
           </div>
@@ -120,15 +107,15 @@
         <div class="col">
           <div class="text-center border shadow p-4">
             <img
-              src="assets/img/jezlyn.jpg"
+              src="assets/img/jezlyn2.jpg"
               alt="Image"
               class="img img-rounded"
               style="width: 240px; height: 240px; object-fit: cover; border-radius: 50%;">
             <h5 class="text-primary mt-3">Jezlyn Cabbab</h5>
-            <div class="social-links">
-              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <div class="social-links mb-3">
+              <a href="https://linkedin.com" target="_blank"><img src="assets/img/linkedin.png" alt="LinkedIn" style="width: 28px; height: 28px; object-fit: cover;"></a>
+              <a href="https://github.com" target="_blank"><img src="assets/img/instagram.png" alt="Instagram" style="width: 28px; height: 28px; object-fit: cover;"></a>
+              <a href="https://twitter.com" target="_blank"><img src="assets/img/facebook.png" alt="Facebook" style="width: 28px; height: 28px; object-fit: cover;"></a>
             </div>
             <small class="text-muted">Fun Fact: Lives on snacks and caffeine. 🍫☕</small>
           </div>
